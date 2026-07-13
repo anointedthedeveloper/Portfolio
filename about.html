@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | A.AGUNLOYE</title>
+  <meta name="description" content="About Anointed Agunloye — Full Stack Developer, Software Engineer, and builder."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <span class="material-symbols-outlined">terminal</span>
+      A.AGUNLOYE
+    </a>
+    <nav>
+      <ul class="navbar__nav">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+      </button>
+      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
+      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </div>
+</header>
+
+<!-- ======= PAGE HERO ======= -->
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Who I Am</p>
+    <h1 class="section-title">About Me</h1>
+    <p class="section-subtitle">Developer, builder, and problem-solver based in Nigeria.</p>
+  </div>
+</section>
+
+<!-- ======= ABOUT MAIN ======= -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Photo -->
+      <div>
+        <div class="about-photo">
+          <!--
+            TO ADD YOUR PHOTO:
+            Replace this comment with:
+            <img src="photo.jpg" alt="Anointed Agunloye"/>
+          -->
+          <span class="material-symbols-outlined">person</span>
+          <p style="font-size:0.875rem;font-weight:500;color:var(--color-text-light);">Add your photo</p>
+          <small style="font-size:0.75rem;opacity:0.6;color:var(--color-text-light);">Replace with &lt;img src="photo.jpg"&gt;</small>
+        </div>
+
+        <!-- Social links below photo -->
+        <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.625rem;">
+          <a href="https://github.com/anointedthedeveloper" target="_blank"
+             rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--color-text-muted);padding:0.625rem 0.875rem;border:1px solid var(--color-border);border-radius:var(--radius-md);transition:color 0.2s,border-color 0.2s;">
+            <span class="material-symbols-outlined" style="font-size:1rem;">code</span>
+            github.com/anointedthedeveloper
+          </a>
+          <a href="https://dev.to/anointedthedeveloper" target="_blank"
+             rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--color-text-muted);padding:0.625rem 0.875rem;border:1px solid var(--color-border);border-radius:var(--radius-md);transition:color 0.2s,border-color 0.2s;">
+            <span class="material-symbols-outlined" style="font-size:1rem;">article</span>
+            dev.to/anointedthedeveloper
+          </a>
+          <a href="https://anobyte.online" target="_blank"
+             rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--color-text-muted);padding:0.625rem 0.875rem;border:1px solid var(--color-border);border-radius:var(--radius-md);transition:color 0.2s,border-color 0.2s;">
+            <span class="material-symbols-outlined" style="font-size:1rem;">language</span>
+            anobyte.online
+          </a>
+        </div>
+      </div>
+
+      <!-- Bio & Skills -->
+      <div>
+        <h2 class="section-title" style="font-size:1.75rem;margin-bottom:1.25rem;">
+          Anointed Agunloye
+        </h2>
+        <p style="font-size:1rem;line-height:1.8;color:var(--color-text-muted);margin-bottom:1.25rem;">
+          I'm a Full Stack Developer and Software Engineer who loves turning ideas into
+          working software. I build everything from real-time web applications and REST APIs
+          to desktop tools and Android apps — always focused on clean code, good
+          architecture, and user experience.
+        </p>
+        <p style="font-size:1rem;line-height:1.8;color:var(--color-text-muted);margin-bottom:2rem;">
+          With 128+ public repositories and 12,000+ contributions in the past year,
+          I ship consistently and learn fast. My projects range from a C# stock management
+          system to a browser-based exam platform to an AI Agent IDE deployed on Vercel.
+          I care deeply about building things that actually get used.
+        </p>
+
+        <!-- Skills grid -->
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.125rem;font-weight:700;color:var(--color-text);margin-bottom:1rem;">
+          Technical Skills
+        </h3>
+        <div class="grid-2" style="gap:1rem;margin-bottom:2.5rem;">
+          <div class="skill-card" style="padding:1.125rem;">
+            <p class="skill-card__title" style="margin-bottom:0.625rem;">Languages</p>
+            <div class="tags">
+              <span class="tag tag-blue">JavaScript</span>
+              <span class="tag tag-blue">TypeScript</span>
+              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-blue">C#</span>
+              <span class="tag tag-blue">C++</span>
+              <span class="tag tag-blue">Kotlin</span>
+              <span class="tag tag-blue">C</span>
+            </div>
+          </div>
+          <div class="skill-card" style="padding:1.125rem;">
+            <p class="skill-card__title" style="margin-bottom:0.625rem;">Frameworks</p>
+            <div class="tags">
+              <span class="tag tag-purple">React</span>
+              <span class="tag tag-purple">Next.js</span>
+              <span class="tag tag-purple">Node.js</span>
+              <span class="tag tag-purple">.NET</span>
+              <span class="tag tag-purple">Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-card" style="padding:1.125rem;">
+            <p class="skill-card__title" style="margin-bottom:0.625rem;">Databases</p>
+            <div class="tags">
+              <span class="tag tag-green">PostgreSQL</span>
+              <span class="tag tag-green">MySQL</span>
+              <span class="tag tag-green">Redis</span>
+              <span class="tag tag-green">SQLite</span>
+            </div>
+          </div>
+          <div class="skill-card" style="padding:1.125rem;">
+            <p class="skill-card__title" style="margin-bottom:0.625rem;">Tools</p>
+            <div class="tags">
+              <span class="tag tag-gray">Git</span>
+              <span class="tag tag-gray">Docker</span>
+              <span class="tag tag-gray">AWS</span>
+              <span class="tag tag-gray">Vercel</span>
+              <span class="tag tag-gray">CI/CD</span>
+              <span class="tag tag-gray">Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.125rem;font-weight:700;color:var(--color-text);margin-bottom:1.25rem;">
+          Timeline
+        </h3>
+        <ul class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__line">
+              <div class="timeline__dot"></div>
+              <div class="timeline__connector"></div>
+            </div>
+            <div>
+              <p class="timeline__date">2026 — Present</p>
+              <p class="timeline__role">Full Stack Developer</p>
+              <p class="timeline__company">Anobyte · Freelance</p>
+              <p class="timeline__desc">Building web platforms, APIs, and software tools for clients. Maintaining 128+ open-source repositories.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__line">
+              <div class="timeline__dot"></div>
+              <div class="timeline__connector"></div>
+            </div>
+            <div>
+              <p class="timeline__date">2025 — 2026</p>
+              <p class="timeline__role">Software Engineer</p>
+              <p class="timeline__company">Self-directed projects</p>
+              <p class="timeline__desc">Built StockWise (C# desktop app), Browser-Based Exam system, RepoRoom (real-time chat), and multiple production APIs.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__line">
+              <div class="timeline__dot"></div>
+              <div class="timeline__connector"></div>
+            </div>
+            <div>
+              <p class="timeline__date">2021 — 2025</p>
+              <p class="timeline__role">Learning & Building</p>
+              <p class="timeline__company">Open Source</p>
+              <p class="timeline__desc">Honed skills across multiple languages and stacks — from frontend design systems to backend APIs and desktop applications.</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CTA ======= -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="cta-banner__title">Want to work together?</h2>
+    <p class="cta-banner__sub">I'm open to freelance, full-time roles, and interesting collaborations.</p>
+    <a href="contact.html" class="btn-white">
+      Get In Touch <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="material-symbols-outlined">terminal</span>
+        A.AGUNLOYE
+      </div>
+      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

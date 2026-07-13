@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A.AGUNLOYE | Portfolio</title>
+  <meta name="description" content="Anointed Agunloye — Full Stack Developer & Software Engineer. Building web platforms, desktop apps, and real-time systems."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <span class="material-symbols-outlined">terminal</span>
+      A.AGUNLOYE
+    </a>
+    <nav>
+      <ul class="navbar__nav">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+      </button>
+      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
+      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="hero__grid-bg"></div>
+  <div class="container">
+    <div class="hero__content">
+
+      <!-- Left: Text -->
+      <div>
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Available for work
+        </div>
+        <h1 class="hero__title">
+          Anointed<br/><span>Agunloye</span>
+        </h1>
+        <p class="hero__description">
+          Full Stack Developer &amp; Software Engineer crafting robust
+          applications and clean interfaces — from web platforms to desktop
+          software, built with precision.
+        </p>
+        <div class="hero__cta">
+          <a href="projects.html" class="btn-primary">
+            View Projects
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="contact.html" class="btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero__stats">
+          <span class="hero__stat">
+            <span class="material-symbols-outlined">code</span>
+            128 repos
+          </span>
+          <span class="hero__stat">
+            <span class="material-symbols-outlined">commit</span>
+            12k+ commits
+          </span>
+          <span class="hero__stat">
+            <span class="material-symbols-outlined">group</span>
+            1k+ followers
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="hero__photo">
+        <div class="hero__photo-wrap">
+          <!--
+            TO ADD YOUR PHOTO:
+            Replace this comment block with:
+            <img src="photo.jpg" alt="Anointed Agunloye"/>
+          -->
+          <div class="hero__photo-placeholder">
+            <span class="material-symbols-outlined">person</span>
+            <p>Add your photo</p>
+            <small>Replace with &lt;img src="photo.jpg"&gt;</small>
+          </div>
+        </div>
+        <div class="hero__photo-glow-1"></div>
+        <div class="hero__photo-glow-2"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= STATS BAR ======= -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-bar__grid">
+      <div>
+        <p class="stats-bar__item-value">128</p>
+        <p class="stats-bar__item-label">Public Repos</p>
+      </div>
+      <div>
+        <p class="stats-bar__item-value">12k+</p>
+        <p class="stats-bar__item-label">Commits</p>
+      </div>
+      <div>
+        <p class="stats-bar__item-value">1k+</p>
+        <p class="stats-bar__item-label">Followers</p>
+      </div>
+      <div>
+        <p class="stats-bar__item-value">5+</p>
+        <p class="stats-bar__item-label">Years Coding</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= FEATURED PROJECTS ======= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header__text">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <a href="projects.html" class="section-header__link hidden-mobile">
+        View all <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- StockWise -->
+      <div class="project-card reveal">
+        <div class="project-card__icon" style="background:#dbeafe;color:#1d4ed8;">
+          <span class="material-symbols-outlined">inventory_2</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">StockWise</h3>
+          <span class="project-card__stars">
+            <span class="material-symbols-outlined">star</span>1
+          </span>
+        </div>
+        <p class="project-card__desc">
+          A full-featured stock &amp; inventory management desktop application
+          built in C#. Handles product tracking, low-stock alerts, sales records,
+          and reporting — designed for real business use.
+        </p>
+        <div class="tags">
+          <span class="tag tag-blue">C#</span>
+          <span class="tag tag-blue">.NET</span>
+          <span class="tag tag-blue">Desktop App</span>
+          <span class="tag tag-blue">SQL</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/stockwise"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          View on GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- Browser-Based Exam -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-card__icon" style="background:#fef3c7;color:#b45309;">
+          <span class="material-symbols-outlined">quiz</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Browser-Based Exam</h3>
+          <span class="project-card__stars">
+            <span class="material-symbols-outlined">star</span>4
+          </span>
+        </div>
+        <p class="project-card__desc">
+          A complete browser-based examination system with timer, question
+          randomisation, auto-scoring, and result reporting. Built for real
+          institutional deployment.
+        </p>
+        <div class="tags">
+          <span class="tag tag-amber">JavaScript</span>
+          <span class="tag tag-amber">HTML/CSS</span>
+          <span class="tag tag-amber">Exam System</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/Browser-Based-Exam"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          View on GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- RepoRoom -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-card__icon" style="background:#ede9fe;color:#6d28d9;">
+          <span class="material-symbols-outlined">forum</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">RepoRoom</h3>
+          <span class="project-card__stars">
+            <span class="material-symbols-outlined">star</span>15
+          </span>
+        </div>
+        <p class="project-card__desc">
+          A modern real-time chat application powered by WebSockets, built
+          with TypeScript for type-safe, low-latency messaging between users.
+        </p>
+        <div class="tags">
+          <span class="tag tag-purple">TypeScript</span>
+          <span class="tag tag-purple">WebSockets</span>
+          <span class="tag tag-purple">Real-time</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/RepoRoom"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          View on GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="mt-8 text-center" style="display:none;" id="view-all-mobile">
+      <a href="projects.html" class="section-header__link">
+        View all projects <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= SKILLS ======= -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center mb-4">
+      <p class="section-label">Tech Stack</p>
+      <h2 class="section-title">What I Work With</h2>
+    </div>
+
+    <div class="grid-4" style="margin-top:3rem;">
+      <div class="skill-card reveal">
+        <span class="material-symbols-outlined">layers</span>
+        <p class="skill-card__title">Frontend</p>
+        <div class="tags">
+          <span class="tag tag-gray">React</span>
+          <span class="tag tag-gray">Next.js</span>
+          <span class="tag tag-gray">TypeScript</span>
+          <span class="tag tag-gray">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <span class="material-symbols-outlined">dns</span>
+        <p class="skill-card__title">Backend</p>
+        <div class="tags">
+          <span class="tag tag-gray">Node.js</span>
+          <span class="tag tag-gray">Python</span>
+          <span class="tag tag-gray">C#</span>
+          <span class="tag tag-gray">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <span class="material-symbols-outlined">phone_android</span>
+        <p class="skill-card__title">Mobile / Desktop</p>
+        <div class="tags">
+          <span class="tag tag-gray">Kotlin</span>
+          <span class="tag tag-gray">.NET</span>
+          <span class="tag tag-gray">C++</span>
+          <span class="tag tag-gray">Java</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <span class="material-symbols-outlined">build</span>
+        <p class="skill-card__title">Tools &amp; Infra</p>
+        <div class="tags">
+          <span class="tag tag-gray">Git</span>
+          <span class="tag tag-gray">Docker</span>
+          <span class="tag tag-gray">AWS</span>
+          <span class="tag tag-gray">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CTA ======= -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="cta-banner__title">Let's Build Something Together</h2>
+    <p class="cta-banner__sub">
+      Available for freelance projects, full-time roles, and technical collaborations.
+    </p>
+    <a href="contact.html" class="btn-white">
+      Get In Touch
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="material-symbols-outlined">terminal</span>
+        A.AGUNLOYE
+      </div>
+      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

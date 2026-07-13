@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | A.AGUNLOYE</title>
+  <meta name="description" content="All projects by Anointed Agunloye — web apps, desktop software, tools, and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ======= NAVBAR ======= -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <span class="material-symbols-outlined">terminal</span>
+      A.AGUNLOYE
+    </a>
+    <nav>
+      <ul class="navbar__nav">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+      </button>
+      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
+      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </div>
+</header>
+
+<!-- ======= PAGE HERO ======= -->
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">My Work</p>
+    <h1 class="section-title">All Projects</h1>
+    <p class="section-subtitle">
+      A curated selection of software, tools, and web projects from
+      <a href="https://github.com/anointedthedeveloper" target="_blank"
+         rel="noopener noreferrer" style="color:var(--color-primary);">128+ public repos</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ======= PROJECTS GRID ======= -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter tabs -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="software">Software</button>
+      <button class="filter-tab" data-filter="web">Web</button>
+      <button class="filter-tab" data-filter="tools">Tools</button>
+      <button class="filter-tab" data-filter="api">APIs</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ---- SOFTWARE ---- -->
+
+      <!-- StockWise -->
+      <div class="project-card reveal" data-category="software">
+        <div class="project-card__icon" style="background:#dbeafe;color:#1d4ed8;">
+          <span class="material-symbols-outlined">inventory_2</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">StockWise</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>1</span>
+        </div>
+        <p class="project-card__desc">
+          Full-featured stock &amp; inventory management desktop app in C#.
+          Tracks products, raises low-stock alerts, records sales, and
+          generates reports — built for real business use.
+        </p>
+        <div class="tags">
+          <span class="tag tag-blue">C#</span>
+          <span class="tag tag-blue">.NET</span>
+          <span class="tag tag-blue">Desktop</span>
+          <span class="tag tag-blue">SQL</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/stockwise"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- Browser-Based Exam -->
+      <div class="project-card reveal reveal-delay-1" data-category="software">
+        <div class="project-card__icon" style="background:#fef3c7;color:#b45309;">
+          <span class="material-symbols-outlined">quiz</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Browser-Based Exam</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>4</span>
+        </div>
+        <p class="project-card__desc">
+          Complete browser-based examination system — timer, question
+          randomisation, auto-scoring, and result reporting. Designed
+          for real institutional deployment.
+        </p>
+        <div class="tags">
+          <span class="tag tag-amber">JavaScript</span>
+          <span class="tag tag-amber">HTML/CSS</span>
+          <span class="tag tag-amber">Education</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/Browser-Based-Exam"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- DocVerse -->
+      <div class="project-card reveal reveal-delay-2" data-category="software">
+        <div class="project-card__icon" style="background:#dcfce7;color:#15803d;">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">DocVerse</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>–</span>
+        </div>
+        <p class="project-card__desc">
+          A Kotlin-based document management application for Android.
+          Organise, search, and view documents efficiently on mobile.
+        </p>
+        <div class="tags">
+          <span class="tag tag-green">Kotlin</span>
+          <span class="tag tag-green">Android</span>
+          <span class="tag tag-green">Mobile</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/DocVerse"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- AD-GUI -->
+      <div class="project-card reveal" data-category="software">
+        <div class="project-card__icon" style="background:#fce7f3;color:#9d174d;">
+          <span class="material-symbols-outlined">desktop_windows</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">AD-GUI</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>2</span>
+        </div>
+        <p class="project-card__desc">
+          A Python-based desktop GUI application — a substantial local
+          tool with a modern interface built using Python's UI libraries.
+        </p>
+        <div class="tags">
+          <span class="tag tag-rose">Python</span>
+          <span class="tag tag-rose">GUI</span>
+          <span class="tag tag-rose">Desktop</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/AD-GUI"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- ---- WEB ---- -->
+
+      <!-- RepoRoom -->
+      <div class="project-card reveal reveal-delay-1" data-category="web">
+        <div class="project-card__icon" style="background:#ede9fe;color:#6d28d9;">
+          <span class="material-symbols-outlined">forum</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">RepoRoom</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>15</span>
+        </div>
+        <p class="project-card__desc">
+          Real-time chat application powered by WebSockets, built with
+          TypeScript for type-safe low-latency messaging.
+        </p>
+        <div class="tags">
+          <span class="tag tag-purple">TypeScript</span>
+          <span class="tag tag-purple">WebSockets</span>
+          <span class="tag tag-purple">Real-time</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/RepoRoom"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- BloomCart -->
+      <div class="project-card reveal reveal-delay-2" data-category="web">
+        <div class="project-card__icon" style="background:#fce7f3;color:#be185d;">
+          <span class="material-symbols-outlined">local_florist</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">BloomCart</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>16</span>
+        </div>
+        <p class="project-card__desc">
+          Full-featured online flower shop platform — browse, customise,
+          and order flowers with product management, order tracking, and
+          delivery tools. Live on Vercel.
+        </p>
+        <div class="tags">
+          <span class="tag tag-rose">TypeScript</span>
+          <span class="tag tag-rose">Next.js</span>
+          <span class="tag tag-rose">E-commerce</span>
+        </div>
+        <div class="flex gap-2 mt-2" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://bloom-cart-flower-shop.vercel.app" target="_blank"
+             rel="noopener noreferrer" class="project-card__link">
+            Live Demo <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <a href="https://github.com/anointedthedeveloper/BloomCart-Flower-Shop"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            GitHub <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ANAI -->
+      <div class="project-card reveal" data-category="web">
+        <div class="project-card__icon" style="background:#cffafe;color:#0e7490;">
+          <span class="material-symbols-outlined">smart_toy</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">ANAI</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>5</span>
+        </div>
+        <p class="project-card__desc">
+          Web-based AI Agent IDE — a browser-native environment for
+          building, running, and iterating on AI agents. Live on Vercel.
+        </p>
+        <div class="tags">
+          <span class="tag tag-cyan">JavaScript</span>
+          <span class="tag tag-cyan">AI</span>
+          <span class="tag tag-cyan">IDE</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://anai-nu.vercel.app" target="_blank"
+             rel="noopener noreferrer" class="project-card__link">
+            Live Demo <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <a href="https://github.com/anointedthedeveloper/ANAI"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            GitHub <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Axiom-UI -->
+      <div class="project-card reveal reveal-delay-1" data-category="web">
+        <div class="project-card__icon" style="background:#ede9fe;color:#7c3aed;">
+          <span class="material-symbols-outlined">palette</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Axiom UI</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>14</span>
+        </div>
+        <p class="project-card__desc">
+          MIT-licensed TypeScript UI component library template.
+          Clean, extensible, and ready for teams to build on.
+        </p>
+        <div class="tags">
+          <span class="tag tag-purple">TypeScript</span>
+          <span class="tag tag-purple">UI Library</span>
+          <span class="tag tag-purple">MIT</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/Axiom-UI"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- Alpine Ascents -->
+      <div class="project-card reveal reveal-delay-2" data-category="web">
+        <div class="project-card__icon" style="background:#dcfce7;color:#16a34a;">
+          <span class="material-symbols-outlined">landscape</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Alpine Ascents</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>16</span>
+        </div>
+        <p class="project-card__desc">
+          A beautifully designed mountain adventures landing page with
+          immersive visuals and smooth interactions. Deployed on GitHub Pages.
+        </p>
+        <div class="tags">
+          <span class="tag tag-green">HTML</span>
+          <span class="tag tag-green">CSS</span>
+          <span class="tag tag-green">JavaScript</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://anointedthedeveloper.github.io/Alpine-Ascents/"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            Live Demo <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <a href="https://github.com/anointedthedeveloper/Alpine-Ascents"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            GitHub <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ---- TOOLS ---- -->
+
+      <!-- github-orbit -->
+      <div class="project-card reveal" data-category="tools">
+        <div class="project-card__icon" style="background:#e0f2fe;color:#0369a1;">
+          <span class="material-symbols-outlined">hub</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">github-orbit</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>9</span>
+        </div>
+        <p class="project-card__desc">
+          Safely automate GitHub follower growth — built with rate-limiting
+          and bot detection to stay within platform policies.
+        </p>
+        <div class="tags">
+          <span class="tag tag-cyan">JavaScript</span>
+          <span class="tag tag-cyan">GitHub API</span>
+          <span class="tag tag-cyan">Automation</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/github-orbit"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- Smart README Generator -->
+      <div class="project-card reveal reveal-delay-1" data-category="tools">
+        <div class="project-card__icon" style="background:#fef9c3;color:#a16207;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Smart README Generator</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>3</span>
+        </div>
+        <p class="project-card__desc">
+          Automatically generate professional README files for any GitHub
+          repository using intelligent templates and project analysis.
+        </p>
+        <div class="tags">
+          <span class="tag tag-amber">JavaScript</span>
+          <span class="tag tag-amber">CLI</span>
+          <span class="tag tag-amber">Dev Tool</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/Smart-README-Generator"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- Ad Blocker Extension -->
+      <div class="project-card reveal reveal-delay-2" data-category="tools">
+        <div class="project-card__icon" style="background:#fee2e2;color:#dc2626;">
+          <span class="material-symbols-outlined">block</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Ad Blocker Extension</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>1</span>
+        </div>
+        <p class="project-card__desc">
+          A browser extension that blocks ads and trackers for a cleaner,
+          faster browsing experience. Built with vanilla JavaScript.
+        </p>
+        <div class="tags">
+          <span class="tag tag-rose">JavaScript</span>
+          <span class="tag tag-rose">Extension</span>
+          <span class="tag tag-rose">Browser</span>
+        </div>
+        <a href="https://github.com/anointedthedeveloper/Ad-Blocker-Extension-"
+           target="_blank" rel="noopener noreferrer" class="project-card__link">
+          GitHub <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+
+      <!-- ---- API ---- -->
+
+      <!-- Anivault API -->
+      <div class="project-card reveal" data-category="api">
+        <div class="project-card__icon" style="background:#f0fdf4;color:#15803d;">
+          <span class="material-symbols-outlined">api</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">Anivault API</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>7</span>
+        </div>
+        <p class="project-card__desc">
+          A public REST API for streaming and downloading anime content.
+          Deployed on Vercel with clean endpoint documentation.
+        </p>
+        <div class="tags">
+          <span class="tag tag-green">Python</span>
+          <span class="tag tag-green">REST API</span>
+          <span class="tag tag-green">Vercel</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://anivault-api.vercel.app" target="_blank"
+             rel="noopener noreferrer" class="project-card__link">
+            Live API <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <a href="https://github.com/anointedthedeveloper/Anivault-api"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            GitHub <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- API Tester -->
+      <div class="project-card reveal reveal-delay-1" data-category="api">
+        <div class="project-card__icon" style="background:#cffafe;color:#0891b2;">
+          <span class="material-symbols-outlined">network_check</span>
+        </div>
+        <div class="project-card__header">
+          <h3 class="project-card__title">API Tester</h3>
+          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>1</span>
+        </div>
+        <p class="project-card__desc">
+          A lightweight browser-based API testing tool — send requests,
+          inspect responses, and debug endpoints without leaving the browser.
+          Live on Vercel.
+        </p>
+        <div class="tags">
+          <span class="tag tag-cyan">JavaScript</span>
+          <span class="tag tag-cyan">Dev Tool</span>
+          <span class="tag tag-cyan">API</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://apitester-teal.vercel.app" target="_blank"
+             rel="noopener noreferrer" class="project-card__link">
+            Live Demo <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <a href="https://github.com/anointedthedeveloper/apitester"
+             target="_blank" rel="noopener noreferrer" class="project-card__link">
+            GitHub <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /.projects-grid -->
+
+    <!-- View all on GitHub -->
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="https://github.com/anointedthedeveloper?tab=repositories"
+         target="_blank" rel="noopener noreferrer" class="btn-outline">
+        <span class="material-symbols-outlined">code</span>
+        See all 128 repos on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="material-symbols-outlined">terminal</span>
+        A.AGUNLOYE
+      </div>
+      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
