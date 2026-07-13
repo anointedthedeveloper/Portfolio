@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | A.AGUNLOYE</title>
+  <title>Contact | Anointed Agunloye</title>
   <meta name="description" content="Get in touch with Anointed Agunloye — for freelance, jobs, or collaborations."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -12,14 +12,14 @@
 </head>
 <body>
 
-<!-- ======= NAVBAR ======= -->
+<!-- ===== NAVBAR ===== -->
 <header class="navbar">
   <div class="navbar__inner">
     <a href="index.html" class="navbar__logo">
       <span class="material-symbols-outlined">terminal</span>
-      A.AGUNLOYE
+      Anointed Agunloye
     </a>
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul class="navbar__nav">
         <li><a href="index.html"    class="nav-link">Home</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -28,7 +28,7 @@
       </ul>
     </nav>
     <div class="navbar__actions">
-      <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">
+      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
         <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
       </button>
       <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
@@ -42,29 +42,31 @@
     <a href="projects.html" class="mobile-nav-link">Projects</a>
     <a href="about.html"    class="mobile-nav-link">About</a>
     <a href="contact.html"  class="mobile-nav-link">Contact</a>
+    <a href="contact.html"  class="btn-primary" style="margin-top:.5rem;justify-content:center;">Hire Me</a>
   </div>
 </header>
 
-<!-- ======= PAGE HERO ======= -->
+<!-- ===== PAGE HERO ===== -->
 <section class="page-hero">
   <div class="container">
     <p class="section-label">Say Hello</p>
     <h1 class="section-title">Get In Touch</h1>
     <p class="section-subtitle">
-      Have a project in mind, a job opportunity, or just want to connect? I'd love to hear from you.
+      Have a project, job opportunity, or just want to connect?
+      I respond within 24 hours.
     </p>
   </div>
 </section>
 
-<!-- ======= CONTACT MAIN ======= -->
+<!-- ===== CONTACT MAIN ===== -->
 <section class="section">
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Left: Info -->
+      <!-- Left — Info cards -->
       <div class="contact-info">
 
-        <div class="contact-info__item">
+        <div class="contact-info__item reveal">
           <div class="contact-info__icon" style="background:#dbeafe;color:#1d4ed8;">
             <span class="material-symbols-outlined">mail</span>
           </div>
@@ -76,19 +78,22 @@
           </div>
         </div>
 
-        <div class="contact-info__item">
+        <div class="contact-info__item reveal reveal-delay-1">
           <div class="contact-info__icon" style="background:#dcfce7;color:#15803d;">
-            <span class="material-symbols-outlined">language</span>
+            <span class="material-symbols-outlined">phone</span>
           </div>
           <div>
-            <p class="contact-info__label">Website</p>
+            <p class="contact-info__label">Phone / WhatsApp</p>
             <p class="contact-info__value">
-              <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">anobyte.online</a>
+              <a href="tel:+2348101209470">+234 810 120 9470</a>
+            </p>
+            <p class="contact-info__value" style="margin-top:.25rem;">
+              <a href="tel:+2349016471351">+234 901 647 1351</a>
             </p>
           </div>
         </div>
 
-        <div class="contact-info__item">
+        <div class="contact-info__item reveal reveal-delay-2">
           <div class="contact-info__icon" style="background:#f3e8ff;color:#7c3aed;">
             <span class="material-symbols-outlined">code</span>
           </div>
@@ -102,22 +107,35 @@
           </div>
         </div>
 
-        <div class="contact-info__item">
+        <div class="contact-info__item reveal reveal-delay-3">
           <div class="contact-info__icon" style="background:#fef3c7;color:#b45309;">
-            <span class="material-symbols-outlined">article</span>
+            <span class="material-symbols-outlined">school</span>
           </div>
           <div>
-            <p class="contact-info__label">Dev.to</p>
+            <p class="contact-info__label">Current Employer</p>
             <p class="contact-info__value">
-              <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">
-                dev.to/anointedthedeveloper
+              <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">
+                Peter Harvard International Schools
               </a>
+            </p>
+            <p style="font-size:.8rem;color:var(--text-muted);margin-top:.15rem;">Lead Software Engineer</p>
+          </div>
+        </div>
+
+        <div class="contact-info__item reveal reveal-delay-4">
+          <div class="contact-info__icon" style="background:#cffafe;color:#0e7490;">
+            <span class="material-symbols-outlined">language</span>
+          </div>
+          <div>
+            <p class="contact-info__label">Website</p>
+            <p class="contact-info__value">
+              <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">anobyte.online</a>
             </p>
           </div>
         </div>
 
-        <div class="contact-info__item">
-          <div class="contact-info__icon" style="background:#cffafe;color:#0891b2;">
+        <div class="contact-info__item reveal reveal-delay-5">
+          <div class="contact-info__icon" style="background:#e0f2fe;color:#0369a1;">
             <span class="material-symbols-outlined">verified_user</span>
           </div>
           <div>
@@ -131,21 +149,24 @@
         </div>
 
         <!-- Availability note -->
-        <div style="padding:1.25rem;background:color-mix(in srgb,var(--color-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--color-primary) 25%,transparent);border-radius:var(--radius-lg);display:flex;gap:0.75rem;align-items:flex-start;">
-          <span class="material-symbols-outlined" style="color:var(--color-primary);font-size:1.25rem;margin-top:0.1rem;flex-shrink:0;">schedule</span>
+        <div class="reveal" style="padding:1.25rem;background:var(--primary-light);border:1px solid rgba(0,119,204,.25);border-radius:var(--radius-lg);display:flex;gap:.875rem;align-items:flex-start;">
+          <span class="material-symbols-outlined" style="color:var(--primary);font-size:1.375rem;margin-top:.05rem;flex-shrink:0;">schedule</span>
           <div>
-            <p style="font-size:0.875rem;font-weight:600;color:var(--color-primary);margin-bottom:0.2rem;">Currently Available</p>
-            <p style="font-size:0.8125rem;color:var(--color-text-muted);line-height:1.5;">
-              Open to freelance projects, full-time roles, and technical collaborations. Typical response time: under 24 hours.
+            <p style="font-size:.875rem;font-weight:700;color:var(--primary);margin-bottom:.25rem;">Currently Available</p>
+            <p style="font-size:.8125rem;color:var(--text-muted);line-height:1.6;">
+              Open to freelance projects, full-time roles, and technical collaborations.
+              Based in Nigeria — working remotely worldwide.
+              Typical response time: under 24 hours.
             </p>
           </div>
         </div>
 
-      </div>
+      </div><!-- /.contact-info -->
 
-      <!-- Right: Form -->
-      <div>
+      <!-- Right — Form -->
+      <div class="reveal reveal-delay-1">
         <form class="contact-form" id="contact-form" novalidate>
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
@@ -160,57 +181,69 @@
           </div>
 
           <div class="form-group">
+            <label for="phone">Phone / WhatsApp <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="+1 234 567 8900" autocomplete="tel"/>
+          </div>
+
+          <div class="form-group">
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject"
                    placeholder="Project inquiry / Job opportunity / Collaboration"/>
           </div>
 
           <div class="form-group">
-            <label for="budget">Budget / Type</label>
+            <label for="budget">Engagement Type</label>
             <select id="budget" name="budget">
               <option value="" disabled selected>Select an option…</option>
               <option value="freelance-small">Freelance — Small project (&lt; $500)</option>
-              <option value="freelance-medium">Freelance — Medium project ($500–$2k)</option>
+              <option value="freelance-medium">Freelance — Medium project ($500 – $2k)</option>
               <option value="freelance-large">Freelance — Large project ($2k+)</option>
               <option value="fulltime">Full-time role</option>
               <option value="collab">Open source / collaboration</option>
+              <option value="consulting">Technical consulting</option>
               <option value="other">Other</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5"
-                      placeholder="Tell me about your project or what you're looking for…" required></textarea>
+            <textarea id="message" name="message" rows="6"
+                      placeholder="Tell me about your project, timeline, and what you're looking for…"
+                      required></textarea>
           </div>
 
-          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:0.875rem;font-size:1rem;">
+          <button type="submit" class="btn-primary"
+                  style="width:100%;justify-content:center;padding:.875rem 1.5rem;font-size:1rem;">
             Send Message
             <span class="material-symbols-outlined">send</span>
           </button>
 
-          <p style="font-size:0.75rem;color:var(--color-text-light);text-align:center;margin-top:0.5rem;">
-            This form sends directly — no third-party trackers.
+          <p style="font-size:.75rem;color:var(--text-light);text-align:center;margin-top:.625rem;">
+            By submitting you agree to our
+            <a href="privacy.html" style="color:var(--primary);">Privacy Policy</a>.
           </p>
+
         </form>
       </div>
 
-    </div>
+    </div><!-- /.contact-grid -->
   </div>
 </section>
 
-<!-- ======= FOOTER ======= -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__logo">
         <span class="material-symbols-outlined">terminal</span>
-        A.AGUNLOYE
+        Anointed Agunloye
       </div>
       <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
       <div class="footer__links">
         <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
+        <a href="privacy.html">Privacy Policy</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
