@@ -31,6 +31,8 @@
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t); d.classList.add('js');
+      var seen = false; try { seen = !!sessionStorage.getItem('seen'); } catch (e) {}
+      if (!seen && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('loading');
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -45,6 +47,12 @@
       "url": "https://anointed.is-a.dev/",
       "image": "https://anointed.is-a.dev/assets/portrait-640.webp",
       "jobTitle": "Lead Full Stack & Software Engineer",
+      "email": "mailto:anointedthedeveloper@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abuja",
+        "addressCountry": "NG"
+      },
       "worksFor": {
         "@type": "Organization",
         "name": "Anobyte Technologies",
@@ -80,6 +88,8 @@
   </script>
 </head>
 <body>
+<div class="loader" aria-hidden="true"><div class="loader__box"><div class="loader__mark">AA</div><div class="loader__bar"><i></i></div><div class="loader__cmd">$ npm run portfolio</div></div></div>
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
@@ -104,26 +114,27 @@
       <p class="status rise" style="--i:0"><span class="status__dot" aria-hidden="true"></span>Open to projects and roles</p>
       <h1 class="display h-xl rise" id="hero-title" style="--i:1">Anointed <em>Agunloye</em></h1>
       <p class="hero__role rise" style="--i:2">Full Stack Developer · Software Engineer · Tool Builder &amp; Automator</p>
-      <p class="lead rise" style="--i:3">I design and ship complete software: React and TypeScript front ends, Node.js and Python back ends, real-time features, and the automation that keeps them running. Lead Full Stack and Software Engineer at Anobyte Technologies.</p>
+      <p class="lead rise" style="--i:3">I build and run production web applications for schools, lenders, service businesses and product teams in Nigeria and Canada: React front ends, Node.js and Express APIs, MongoDB and PostgreSQL, real-time features and the automation around them. Lead Full Stack and Software Engineer at Anobyte Technologies.</p>
       <div class="hero__cta rise" style="--i:4">
         <a class="btn btn--primary" href="projects.html">View projects <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
-        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub profile</a>
+        <a class="btn" href="assets/Anointed-Agunloye-Resume.pdf" download><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg> Résumé PDF</a>
+        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
       </div>
-      <p class="hero__facts rise" style="--i:5"><span><strong data-years>7+</strong> years building software</span><span>Nigeria · working remotely</span></p>
+      <p class="hero__facts rise" style="--i:5"><span><strong data-years>7+</strong> years building software</span><span>Abuja, Nigeria · working remotely</span></p>
     </div>
     <figure class="term rise" style="--i:3" aria-label="Terminal summary of my stack and featured projects">
       <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>~/anointed — stack</span></div>
-      <div class="term__body" role="img" aria-label="cat stack.json: frontend React, Next.js, TypeScript; backend Node.js, Express, Python; data PostgreSQL, MongoDB, SQLite; realtime WebSockets, WebRTC, Supabase. ls projects/featured: reporoom, codesync, github-orbit, weblab-ide.">
-<p><span class="t-p">$</span> cat stack.json</p>
-<p>{</p>
-<p>  <span class="t-k">"frontend"</span>: ["React", "Next.js", "TypeScript"],</p>
-<p>  <span class="t-k">"backend"</span>:  ["Node.js", "Express", "Python"],</p>
-<p>  <span class="t-k">"data"</span>:     ["PostgreSQL", "MongoDB", "SQLite"],</p>
-<p>  <span class="t-k">"realtime"</span>: ["WebSockets", "WebRTC", "Supabase"]</p>
-<p>}</p>
-<p><span class="t-p">$</span> ls projects/featured</p>
-<p class="t-g">reporoom  codesync  github-orbit  weblab-ide</p>
-<p><span class="t-p">$</span> <span class="term__cursor"></span></p>
+      <div class="term__body" role="img" aria-label="cat stack.json: frontend React, TypeScript, Tailwind; backend Node.js, Express, REST; data MongoDB, PostgreSQL, Supabase; realtime WebSockets, WebRTC. ls projects/featured: reporoom, codesync, github-orbit, weblab-ide.">
+<p class="t-line"><span class="t-p">$</span> <span class="t-cmd">cat stack.json</span></p>
+<p class="t-line">{</p>
+<p class="t-line">  <span class="t-k">"frontend"</span>: ["React", "TypeScript", "Tailwind"],</p>
+<p class="t-line">  <span class="t-k">"backend"</span>:  ["Node.js", "Express", "REST"],</p>
+<p class="t-line">  <span class="t-k">"data"</span>:     ["MongoDB", "PostgreSQL", "Supabase"],</p>
+<p class="t-line">  <span class="t-k">"realtime"</span>: ["WebSockets", "WebRTC"]</p>
+<p class="t-line">}</p>
+<p class="t-line"><span class="t-p">$</span> <span class="t-cmd">ls projects/featured</span></p>
+<p class="t-line t-g">reporoom  codesync  github-orbit  weblab-ide</p>
+<p class="t-line"><span class="t-p">$</span> <span class="term__cursor"></span></p>
       </div>
       <div class="term__id"><img src="assets/portrait-160.webp" width="160" height="160" alt="Portrait of Anointed Agunloye"><span><span class="t-n">Anointed Agunloye</span><span class="t-s">Anobyte Technologies · 2025 — Present</span></span></div>
     </figure>
@@ -139,6 +150,7 @@
     <div class="metric"><p class="metric__value" data-project-count>16</p><p class="metric__label">Projects documented on this site</p></div>
   </div>
   <p class="metrics-note"><span data-gh-note>Loading GitHub figures…</span></p>
+  <p class="clients"><span>Built for</span><b>Real Moving Canada</b><b>Etak Travels &amp; Tours</b><b>Aremu Tech Eazy Solutions</b><b>Protech Corporate Solutions</b><b>Peter Harvard International Schools</b></p>
 </section>
 
 <section class="section" id="projects" aria-labelledby="projects-title">
@@ -167,8 +179,8 @@
   <div class="wrap">
     <div class="sec-head"><div><p class="eyebrow">Technical expertise</p><h2 class="display h-lg" id="skills-title">What I build with</h2>
       <p class="lead">Grouped by the kind of work, and limited to tools that appear in repositories I have written.</p></div></div>
-    <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Component-driven, responsive interfaces, including real-time and installable (PWA) apps.</p><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Monaco Editor</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>APIs, real-time servers, authentication and background jobs.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">WebSockets</span><span class="chip">Socket.io</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Relational and document stores, with access rules enforced at the database.</p><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Row-level security</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Yjs (CRDT)</span></div></div><div class="skill reveal"><h3>Tooling, infrastructure &amp; automation</h3><p>The pipeline around the code: deploys, schedulers and developer tooling.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Docker</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">Cron jobs</span><span class="chip">CLI tools (npm / npx)</span></div></div></div>
-<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET 8 (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
+    <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Accessible, responsive interfaces, including installable PWAs.</p><div class="chips"><span class="chip">React.js</span><span class="chip">JavaScript (ES6+)</span><span class="chip">TypeScript</span><span class="chip">React Router</span><span class="chip">Context API</span><span class="chip">TanStack Query</span><span class="chip">React Hook Form</span><span class="chip">Tailwind CSS</span><span class="chip">Vite</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>REST APIs, authentication and security, and real-time servers.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">RESTful API design</span><span class="chip">JWT &amp; cookie sessions</span><span class="chip">bcrypt</span><span class="chip">Zod validation</span><span class="chip">Rate limiting</span><span class="chip">CORS / CSRF</span><span class="chip">WebSockets</span><span class="chip">Socket.IO</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Schema design and access rules enforced where the data lives.</p><div class="chips"><span class="chip">MongoDB (Mongoose, Atlas)</span><span class="chip">PostgreSQL</span><span class="chip">Migrations</span><span class="chip">Row-level security</span><span class="chip">Supabase</span><span class="chip">Supabase Realtime</span><span class="chip">SQLite</span></div></div><div class="skill reveal"><h3>Tooling, delivery &amp; automation</h3><p>Testing, deployment and the tooling around the code.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Supertest</span><span class="chip">Vitest</span><span class="chip">React Testing Library</span><span class="chip">ESLint</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">npm publishing</span><span class="chip">Resend (email)</span><span class="chip">Cron jobs</span></div></div></div>
+<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
   </div>
 </section>
 
@@ -183,17 +195,17 @@
   <div>
     <p class="tl__kind">Employment</p>
     <h3 class="tl__role">Lead Full Stack &amp; Software Engineer</h3>
-    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a></p>
-    <ul><li>Lead full stack and software engineering across web applications, APIs and internal tools.</li><li>Public work in this period includes RepoRoom, CodeSync, WebLab IDE and the Nexus CLI.</li></ul>
+    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a> · Remote</p>
+    <ul><li>Lead engineering for a software studio delivering web platforms, REST APIs and desktop software for clients in Nigeria and Canada.</li><li>Delivered Real Moving Canada, Etak Travels &amp; Tours and Aremu Tech Eazy Solutions to production, and built StockWise, a C#/.NET inventory system.</li><li>Author of <a class="link" href="https://www.npmjs.com/package/create-nexus-react-app" target="_blank" rel="noopener noreferrer">create-nexus-react-app</a>, a published npm CLI.</li></ul>
   </div>
 </li>
       <li class="tl reveal">
-  <p class="tl__date">Ongoing</p>
+  <p class="tl__date">2025 — Present</p>
   <div>
-    <p class="tl__kind">Client engagement</p>
+    <p class="tl__kind">Employment</p>
     <h3 class="tl__role">Lead Software Engineer</h3>
-    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a></p>
-    <ul><li>Builds and maintains the school’s website and related systems, including a transcript portal.</li></ul>
+    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a> · Abuja, Nigeria</p>
+    <ul><li>Sole engineer for the school’s software estate: public website, student, parent and staff portal, student management system and admissions workflow.</li></ul>
   </div>
 </li>
       <li class="tl reveal">
@@ -201,8 +213,8 @@
   <div>
     <p class="tl__kind">Independent</p>
     <h3 class="tl__role">Full Stack Developer</h3>
-    <p class="tl__org">Freelance and open source</p>
-    <ul><li>Web platforms, REST APIs, desktop software and developer tools for clients and public repositories.</li></ul>
+    <p class="tl__org">Freelance · Remote</p>
+    <ul><li>Web applications, REST APIs and internal tools for clients, delivered from requirements to deployment, including loan management software for Protech Corporate Solutions.</li></ul>
   </div>
 </li>
       <li class="tl reveal">
@@ -211,7 +223,7 @@
     <p class="tl__kind">Learning</p>
     <h3 class="tl__role">Self-directed study</h3>
     <p class="tl__org">Computer science and software engineering</p>
-    <ul><li>Programming fundamentals, data structures and algorithms, working in C, C++, Python and JavaScript.</li></ul>
+    <ul><li>Programming fundamentals, data structures and algorithms across C, C++, Python and JavaScript.</li></ul>
   </div>
 </li>
     </ol>
@@ -236,6 +248,7 @@
       </div>
       <div class="cta__actions">
         <a class="btn btn--primary" href="contact.html">Get in touch <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="assets/Anointed-Agunloye-Resume.pdf" download><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg> Résumé</a>
         <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
       </div>
     </div>
