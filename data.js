@@ -76,6 +76,7 @@ window.PORTFOLIO = {
     },
     {
       id: 'nexus-cli', repo: 'NexusDeveloper-CLI-Tool', name: 'Nexus CLI', cat: 'tools', kind: 'CLI scaffolder',
+      home: true,
       art: { label: 'from README', lines: [
         ['p', '$ ', 'npx create-nexus-react-app my-app'],
         ['d', '  --template   basic | minimal'],

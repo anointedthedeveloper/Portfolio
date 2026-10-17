@@ -32,8 +32,8 @@
   --shadow: 0 1px 2px rgba(22,20,15,.05), 0 8px 24px -12px rgba(22,20,15,.18);
   --shadow-lg: 0 2px 4px rgba(22,20,15,.06), 0 24px 48px -20px rgba(22,20,15,.28);
 
-  --gutter: clamp(1rem, 3vw, 4rem);
-  --wrap: 106rem;
+  --gutter: clamp(1rem, 2.2vw, 2.5rem);
+  --wrap: 240rem;
   --header-h: 3.75rem;
   --ease: cubic-bezier(.2,.7,.2,1);
   color-scheme: light;
@@ -239,12 +239,6 @@ button { cursor: pointer; }
 .more-link:hover { border-color: var(--accent); color: var(--accent); }
 
 /* 9. Project cards ----------------------------------------- */
-.projects { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.projects--home { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.projects--home > :nth-child(1) { grid-column: span 6; }
-.projects--home > :nth-child(n+2) { grid-column: span 3; }
-@media (min-width: 72rem) { .projects--home > :nth-child(n+2) { grid-column: span 2; } }
-@media (min-width: 84rem) { .projects:not(.projects--home):not(.projects--3) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .pcard { position: relative; display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; transition: transform .25s var(--ease), border-color .2s, box-shadow .25s var(--ease); min-width: 0; }
 .pcard:hover { transform: translateY(-3px); border-color: var(--line-2); box-shadow: var(--shadow); }
@@ -268,11 +262,10 @@ button { cursor: pointer; }
 .pcard__state { font: 500 .72rem/1.4 var(--mono); color: var(--ink-3); }
 
 /* spotlight (wide, media beside copy) */
-.pcard--spot { flex-direction: row; }
-.pcard--spot .pcard__media { flex: 1.25; aspect-ratio: auto; min-height: 0; border-bottom: 0; border-right: 1px solid var(--line); }
-.pcard--spot .pcard__body { flex: 1; padding: 1.75rem; }
+.pcard--spot, .pcard--row { flex-direction: row; }
+.pcard--spot .pcard__media, .pcard--row .pcard__media { flex: 1.25; aspect-ratio: auto; min-height: 0; border-bottom: 0; border-right: 1px solid var(--line); }
+.pcard--spot .pcard__body, .pcard--row .pcard__body { flex: 1; padding: 1.75rem; }
 .pcard--spot .pcard__title { font-size: clamp(2rem, 4vw, 2.75rem); }
-.projects > .pcard--spot { grid-column: 1 / -1; }
 
 /* typographic card for projects without a verified screenshot */
 .pcard__art { position: absolute; inset: 0; padding: 2.9rem 1.15rem 1.1rem; background: var(--term-bg); color: var(--term-ink); font: 400 .8rem/1.75 var(--mono); overflow: hidden; }
@@ -284,11 +277,9 @@ button { cursor: pointer; }
 .pcard__art-label { position: absolute; right: .75rem; bottom: .6rem; font-size: .62rem; color: var(--term-dim); letter-spacing: .06em; text-transform: uppercase; }
 
 @media (max-width: 52rem) {
-  .projects, .projects--home { grid-template-columns: 1fr; }
-  .projects--home > :nth-child(n) { grid-column: auto; }
-  .pcard--spot { flex-direction: column; }
-  .pcard--spot .pcard__media { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
-  .pcard--spot .pcard__body { padding: 1.25rem; }
+  .pcard--spot, .pcard--row { flex-direction: column; }
+  .pcard--spot .pcard__media, .pcard--row .pcard__media { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .pcard--spot .pcard__body, .pcard--row .pcard__body { padding: 1.25rem; }
 }
 
 /* toolbar */
@@ -454,11 +445,6 @@ select { width: auto; appearance: auto; }
   .brand { font-size: 0; gap: 0; }
 }
 
-@media (min-width: 64rem) {
-  .projects--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .projects--3 .pcard__title { font-size: 1.45rem; }
-}
-@media (min-width: 52.01rem) and (max-width: 64rem) { .projects--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 @media (max-width: 30rem) {
   .term__body p { white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -516,3 +502,14 @@ select { width: auto; appearance: auto; }
 .edu li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1.5rem; padding: .9rem 0; border-bottom: 1px solid var(--line); }
 .edu b { font-weight: 600; }
 .edu span { color: var(--ink-3); }
+
+/* ---------- Project grids: always whole rows ----------
+   12-column subgrid; --span is cards-per-row's share. main.js stretches the last
+   row's cards (data-balance) so 5 cards in 4 columns never leave a hole. */
+.projects { --cols: 1; --span: 12; display: grid; gap: 1.25rem; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.projects > * { grid-column: span var(--span); }
+.projects > .pcard--spot { grid-column: 1 / -1; }
+@media (min-width: 52rem) { .projects { --cols: 2; --span: 6; } }
+@media (min-width: 84rem) { .projects { --cols: 4; --span: 3; } }
+@media (min-width: 52rem) { .projects--3 { --cols: 2; --span: 6; } }
+@media (min-width: 72rem) { .projects--3 { --cols: 3; --span: 4; } .projects--3 .pcard__title { font-size: 1.5rem; } }

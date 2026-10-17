@@ -198,17 +198,31 @@
     if (p.image) {
       var b = 'assets/projects/' + p.image;
       inner = '<img src="' + b + '-1200.webp" srcset="' + b + '-640.webp 640w, ' + b + '-1200.webp 1200w" ' +
-        'sizes="(min-width: 52rem) ' + (p.spot ? '640px' : '420px') + ', 100vw" width="1200" height="675" ' +
+        'sizes="' + (p.spot ? '(min-width: 52rem) 55vw, 100vw' : '(min-width: 84rem) 25vw, (min-width: 52rem) 50vw, 100vw') + '" width="1200" height="675" ' +
         'alt="' + esc(p.alt) + '" ' + (eager ? 'fetchpriority="high"' : 'loading="lazy"') + ' decoding="async">';
     } else if (p.art) {
       inner = artHtml(p.art);
     } else { return ''; }
     return '<div class="pcard__media">' + inner + '<span class="pcard__kind">' + esc(p.kind) + '</span></div>';
   }
+  /* Stretch the cards of an incomplete last row so every row is full. */
+  function balance(list) {
+    if (!list) return;
+    var cards = $$(':scope > .pcard', list).filter(function (c) { return !c.classList.contains('pcard--spot'); });
+    cards.forEach(function (c) { c.style.gridColumn = ''; c.classList.remove('pcard--row'); });
+    var cols = parseInt(getComputedStyle(list).getPropertyValue('--cols'), 10) || 1;
+    var rem = cols > 1 ? cards.length % cols : 0;
+    if (!rem) return;
+    var span = 12 / rem;
+    cards.slice(cards.length - rem).forEach(function (c) { c.style.gridColumn = 'span ' + span; if (span === 12) c.classList.add('pcard--row'); });
+  }
+  var balanceAll = function () { $$('.projects').forEach(balance); };
+  var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(balanceAll, 120); });
+
   function metaHtml(p) {
     var r = p.repo && byName[p.repo.toLowerCase()];
     if (!r) return '';
-    var h = '<span title="' + r.stars + ' GitHub stars">' + icon('star') + r.stars + '</span>';
+    var h = r.stars ? '<span title="' + r.stars + ' GitHub stars">' + icon('star') + r.stars + '</span>' : '';
     if (r.forks) h += '<span title="' + r.forks + ' forks">' + icon('fork') + r.forks + '</span>';
     return h;
   }
@@ -248,7 +262,7 @@
     homeList.innerHTML = D.projects.filter(function (p) { return p.home; }).map(function (p, i) {
       return cardHtml(p, i === 0).replace('<article class="pcard', '<article class="reveal pcard');
     }).join('');
-    readyImages(homeList); observe(homeList);
+    readyImages(homeList); balance(homeList); observe(homeList);
   }
 
   var clientList = $('[data-projects="client"]');
@@ -256,7 +270,7 @@
     clientList.innerHTML = D.projects.filter(function (p) { return p.cat === 'client'; }).map(function (p) {
       return cardHtml(p, false).replace('<article class="pcard', '<article class="reveal pcard');
     }).join('');
-    readyImages(clientList); observe(clientList);
+    readyImages(clientList); balance(clientList); observe(clientList);
   }
 
   var list = $('[data-projects="all"]');
@@ -291,7 +305,7 @@
         first = false;
         return html;
       }).join('');
-      readyImages(list);
+      readyImages(list); balance(list);
       emptyEl.hidden = items.length > 0;
       countEl.textContent = items.length + (items.length === 1 ? ' project' : ' projects') + (state.cat !== 'all' || q ? ' match' + (items.length === 1 ? 'es' : '') : '');
     };
