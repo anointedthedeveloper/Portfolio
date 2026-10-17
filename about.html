@@ -1,284 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Anointed Agunloye</title>
-  <meta name="description" content="About Anointed Agunloye — Lead Software Engineer at Peter Harvard International Schools and Full Stack Developer."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About & Experience | Anointed Agunloye</title>
+  <meta name="description" content="Anointed Agunloye is a full stack developer and software engineer with 7+ years of development experience, leading engineering at Anobyte Technologies.">
+  <link rel="canonical" href="https://anointed.is-a.dev/about.html">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anointed Agunloye">
+  <meta property="og:title" content="About & Experience | Anointed Agunloye">
+  <meta property="og:description" content="Anointed Agunloye is a full stack developer and software engineer with 7+ years of development experience, leading engineering at Anobyte Technologies.">
+  <meta property="og:url" content="https://anointed.is-a.dev/about.html">
+  <meta property="og:image" content="https://anointed.is-a.dev/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anointed Agunloye, Full Stack Developer and Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About & Experience | Anointed Agunloye">
+  <meta name="twitter:description" content="Anointed Agunloye is a full stack developer and software engineer with 7+ years of development experience, leading engineering at Anobyte Technologies.">
+  <meta name="twitter:image" content="https://anointed.is-a.dev/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t); d.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-      <span class="material-symbols-outlined">terminal</span>
-      Anointed Agunloye
-    </a>
-    <nav aria-label="Primary navigation">
-      <ul class="navbar__nav">
-        <li><a href="index.html"    class="nav-link">Home</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="about.html"    class="nav-link">About</a></li>
-        <li><a href="contact.html"  class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="navbar__actions">
-      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
-        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
-      </button>
-      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
-      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Anointed Agunloye, home"><span class="brand__mark" aria-hidden="true">AA</span>Anointed Agunloye</a>
+    <nav class="nav" aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="projects.html">Projects</a></li><li><a class="nav__link" href="index.html#experience">Experience</a></li><li><a class="nav__link" href="about.html" aria-current="page">About</a></li><li><a class="nav__link" href="contact.html">Contact</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg></a>
+      <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="icon i-moon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-moon"/></svg><svg class="icon i-sun" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-sun"/></svg></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Get in touch</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon i-menu" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-menu"/></svg><svg class="icon i-close" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-close"/></svg></button>
     </div>
-  </div>
-  <div id="mobile-menu" class="mobile-menu">
-    <a href="index.html"    class="mobile-nav-link">Home</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="about.html"    class="mobile-nav-link">About</a>
-    <a href="contact.html"  class="mobile-nav-link">Contact</a>
-    <a href="contact.html"  class="btn-primary" style="margin-top:.5rem;justify-content:center;">Hire Me</a>
   </div>
 </header>
-
-<!-- ===== PAGE HERO ===== -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="index.html">Home<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="projects.html">Projects<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="index.html#experience">Experience<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="about.html" aria-current="page">About<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="contact.html">Contact<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+  <a class="btn btn--primary" href="contact.html">Get in touch</a>
+</div>
+<main id="main">
 <section class="page-hero">
-  <div class="container">
-    <p class="section-label">Who I Am</p>
-    <h1 class="section-title">About Me</h1>
-    <p class="section-subtitle">
-      Lead Software Engineer · Full Stack Developer · Builder of real software.
-    </p>
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1 class="display h-xl">Software, end to end</h1>
+    <p class="lead">I have been writing software since 2019 and now lead full stack and software engineering at Anobyte Technologies.</p>
   </div>
 </section>
-
-<!-- ===== MAIN ABOUT ===== -->
 <section class="section">
-  <div class="container">
-    <div class="about-grid">
-
-      <!-- Left column — photo + socials -->
-      <div class="reveal">
-        <div class="about-photo">
-          <!--
-            ADD YOUR PHOTO:
-            Replace the content of this div with:
-            <img src="photo.jpg" alt="Anointed Agunloye"/>
-          -->
-          <span class="material-symbols-outlined">person</span>
-          <p style="font-size:.875rem;font-weight:500;color:var(--text-light);">Add your photo</p>
-          <small style="font-size:.75rem;opacity:.6;color:var(--text-light);">&lt;img src="photo.jpg"&gt;</small>
-        </div>
-
-        <div style="display:flex;flex-direction:column;gap:.625rem;margin-top:1.5rem;">
-          <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">code</span>
-            github.com/anointedthedeveloper
-          </a>
-          <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">article</span>
-            dev.to/anointedthedeveloper
-          </a>
-          <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">language</span>
-            anobyte.online
-          </a>
-          <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">school</span>
-            peterharvardschools.cloud
-          </a>
-          <a href="https://icodethis.com/Anointedthedev" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">emoji_events</span>
-            icodethis.com/Anointedthedev
-          </a>
-          <a href="https://orcid.org/0009-0005-6994-0820" target="_blank" rel="noopener noreferrer" class="social-link">
-            <span class="material-symbols-outlined">verified_user</span>
-            ORCID 0009-0005-6994-0820
-          </a>
-        </div>
+  <div class="wrap about">
+    <aside class="about__side">
+      <div class="portrait"><img src="assets/portrait-640.webp" width="640" height="602" alt="Portrait of Anointed Agunloye smiling, in a black hoodie" fetchpriority="high"></div>
+      <div class="links-list">
+        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> github.com/anointedthedeveloper</a>
+        <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-pen"/></svg> dev.to/anointedthedeveloper</a>
+        <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg> anobyte.online</a>
+        <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg> peterharvardschools.cloud</a>
+        <a href="https://orcid.org/0009-0005-6994-0820" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg> ORCID 0009-0005-6994-0820</a>
       </div>
-
-      <!-- Right column — bio, skills, timeline -->
+    </aside>
+    <div class="about__main">
+      <section aria-labelledby="story">
+        <h2 class="display h-md" id="story">Background</h2>
+        <div class="prose">
+          <p>I am a full stack developer and software engineer from Nigeria. I started programming in 2019, teaching myself computer science fundamentals before building for clients and publishing my work on GitHub.</p>
+          <p>Day to day that means React and TypeScript interfaces, Node.js and Python services, and the databases behind them, plus the occasional desktop app in C# or Android app in Kotlin. I am most interested in real-time systems, access control done properly at the database, and tools that remove repetitive work.</p>
+          <p>Alongside Anobyte Technologies, I build and maintain software for Peter Harvard International Schools. I also publish on <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>.</p>
+        </div>
+      </section>
+      <section aria-labelledby="how">
+        <h2 class="display h-md" id="how">How I build</h2>
+        <ol class="principles">
+          <li><span class="n">01</span><span><b>Own the whole path.</b>Schema, API, interface and deployment. Most bugs live at the seams, so I work on both sides of them.</span></li>
+          <li><span class="n">02</span><span><b>Put rules where they cannot be bypassed.</b>RepoRoom enforces row-level security in Postgres; the exam system persists progress on the server so a restart loses nothing.</span></li>
+          <li><span class="n">03</span><span><b>Automate the repetitive part.</b>github-orbit runs on a schedule and the Nexus CLI scaffolds a project in one command.</span></li>
+          <li><span class="n">04</span><span><b>Respect limits.</b>Rate limits, bot filters and cooldowns are part of the design, not an afterthought.</span></li>
+        </ol>
+      </section>
+      <section id="experience" aria-labelledby="exp">
+        <h2 class="display h-md" id="exp">Experience</h2>
+        <ol class="timeline">
+          <li class="tl reveal">
+  <p class="tl__date">2025 — Present</p>
+  <div>
+    <p class="tl__kind">Employment</p>
+    <h3 class="tl__role">Lead Full Stack &amp; Software Engineer</h3>
+    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a></p>
+    <ul><li>Lead full stack and software engineering across web applications, APIs and internal tools at an engineering company focused on digital solutions.</li><li>Public work from this period: <a class="link" href="projects.html#fullstack">RepoRoom</a> (real-time chat with WebRTC calls), CodeSync (CRDT collaborative editor), github-orbit (scheduled automation) and WebLab IDE.</li></ul><div class="chips"><span class=chip>React</span><span class=chip>TypeScript</span><span class=chip>Node.js</span><span class=chip>Supabase</span><span class=chip>PostgreSQL</span><span class=chip>WebSockets</span></div>
+  </div>
+</li>
+          <li class="tl reveal">
+  <p class="tl__date">Ongoing</p>
+  <div>
+    <p class="tl__kind">Client engagement</p>
+    <h3 class="tl__role">Lead Software Engineer</h3>
+    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a></p>
+    <ul><li>Builds and maintains the school’s website and related systems, including a transcript portal (public repositories: Peter-Harvard-International-Schools, PHIS-Transcript-Portal).</li></ul><div class="chips"><span class=chip>JavaScript</span><span class=chip>Web platform</span></div>
+  </div>
+</li>
+          <li class="tl reveal">
+  <p class="tl__date">2021 — Present</p>
+  <div>
+    <p class="tl__kind">Independent</p>
+    <h3 class="tl__role">Full Stack Developer</h3>
+    <p class="tl__org">Freelance and open source</p>
+    <ul><li>Web platforms, REST APIs, desktop software and developer tools, including the BloomCart storefront, the StockWise inventory app and the Browser-Based Exam system.</li><li>Websites and apps for organisations including Etak Travels &amp; Tours, Aremu Tech Eazy Solutions, Real Moving Canada and Campus Coin (see <a class="link" href="projects.html#client">Projects</a>).</li><li>Maintains a large body of public repositories, including Python API services and developer tooling.</li></ul><div class="chips"><span class=chip>Python</span><span class=chip>C# / .NET</span><span class=chip>Express</span><span class=chip>Docker</span></div>
+  </div>
+</li>
+          <li class="tl reveal">
+  <p class="tl__date">2019 — 2021</p>
+  <div>
+    <p class="tl__kind">Learning</p>
+    <h3 class="tl__role">Self-directed study</h3>
+    <p class="tl__org">Computer science and software engineering</p>
+    <ul><li>Programming fundamentals, data structures and algorithms across C, C++, Python and JavaScript.</li></ul>
+  </div>
+</li>
+        </ol>
+      </section>
+      <section aria-labelledby="skills-t">
+        <h2 class="display h-md" id="skills-t">Technical expertise</h2>
+        <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Component-driven, responsive interfaces, including real-time and installable (PWA) apps.</p><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Monaco Editor</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>APIs, real-time servers, authentication and background jobs.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">WebSockets</span><span class="chip">Socket.io</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Relational and document stores, with access rules enforced at the database.</p><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Row-level security</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Yjs (CRDT)</span></div></div><div class="skill reveal"><h3>Tooling, infrastructure &amp; automation</h3><p>The pipeline around the code: deploys, schedulers and developer tooling.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Docker</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">Cron jobs</span><span class="chip">CLI tools (npm / npx)</span></div></div></div>
+<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET 8 (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
+      </section>
+    </div>
+  </div>
+</section>
+<section class="section cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta__box reveal">
       <div>
-        <h2 class="section-title reveal" style="font-size:1.875rem;margin-bottom:1.25rem;">
-          Anointed Agunloye
-        </h2>
-
-        <p class="reveal reveal-delay-1" style="font-size:1rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.125rem;">
-          I'm a Full Stack Developer and Lead Software Engineer currently working at
-          <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer"
-             style="color:var(--primary);font-weight:600;">Peter Harvard International Schools</a>,
-          where I architect and maintain the school's entire digital infrastructure — from the official website
-          to student management systems and internal tools.
-        </p>
-
-        <p class="reveal reveal-delay-2" style="font-size:1rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.125rem;">
-          I build everything: real-time web applications, REST APIs, desktop software in C#, Android apps in Kotlin,
-          browser extensions, CLI tools, and AI-powered IDEs. My stack spans JavaScript/TypeScript, Python, C#, C++,
-          Kotlin, and more — with databases including PostgreSQL, MongoDB, MySQL, and Redis.
-        </p>
-
-        <p class="reveal reveal-delay-3" style="font-size:1rem;line-height:1.8;color:var(--text-muted);margin-bottom:2.5rem;">
-          With 128+ public repositories and 12,000+ contributions in the past year, I ship consistently and learn
-          fast. I care about building software that actually gets used — not just software that looks good on paper.
-        </p>
-
-        <!-- Skills grid -->
-        <h3 class="reveal" style="font-family:'Space Grotesk',sans-serif;font-size:1.125rem;font-weight:700;color:var(--text);margin-bottom:1rem;">
-          Technical Skills
-        </h3>
-        <div class="grid-2 reveal reveal-delay-1" style="gap:1rem;margin-bottom:2.5rem;">
-
-          <div class="skill-card" style="padding:1.125rem;">
-            <p class="skill-card__title">Languages</p>
-            <div class="tags">
-              <span class="tag tag-blue">JavaScript</span>
-              <span class="tag tag-blue">TypeScript</span>
-              <span class="tag tag-blue">Python</span>
-              <span class="tag tag-blue">C#</span>
-              <span class="tag tag-blue">C++</span>
-              <span class="tag tag-blue">Kotlin</span>
-              <span class="tag tag-blue">C</span>
-            </div>
-          </div>
-
-          <div class="skill-card" style="padding:1.125rem;">
-            <p class="skill-card__title">Frameworks</p>
-            <div class="tags">
-              <span class="tag tag-purple">React</span>
-              <span class="tag tag-purple">Next.js</span>
-              <span class="tag tag-purple">Node.js</span>
-              <span class="tag tag-purple">.NET</span>
-              <span class="tag tag-purple">Tailwind</span>
-              <span class="tag tag-purple">Express</span>
-            </div>
-          </div>
-
-          <div class="skill-card" style="padding:1.125rem;">
-            <p class="skill-card__title">Databases</p>
-            <div class="tags">
-              <span class="tag tag-green">PostgreSQL</span>
-              <span class="tag tag-green">MongoDB</span>
-              <span class="tag tag-green">MySQL</span>
-              <span class="tag tag-green">Redis</span>
-              <span class="tag tag-green">SQLite</span>
-            </div>
-          </div>
-
-          <div class="skill-card" style="padding:1.125rem;">
-            <p class="skill-card__title">Tools &amp; Cloud</p>
-            <div class="tags">
-              <span class="tag tag-gray">Git</span>
-              <span class="tag tag-gray">Docker</span>
-              <span class="tag tag-gray">AWS</span>
-              <span class="tag tag-gray">Vercel</span>
-              <span class="tag tag-gray">CI/CD</span>
-              <span class="tag tag-gray">Figma</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Timeline -->
-        <h3 class="reveal" style="font-family:'Space Grotesk',sans-serif;font-size:1.125rem;font-weight:700;color:var(--text);margin-bottom:1.25rem;">
-          Experience Timeline
-        </h3>
-        <ul class="timeline">
-
-          <li class="timeline__item reveal">
-            <div class="timeline__line">
-              <div class="timeline__dot"></div>
-              <div class="timeline__connector"></div>
-            </div>
-            <div>
-              <p class="timeline__date">2025 — Present</p>
-              <p class="timeline__role">Lead Software Engineer</p>
-              <p class="timeline__company">
-                <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer"
-                   style="color:var(--primary);">Peter Harvard International Schools</a>
-              </p>
-              <p class="timeline__desc">
-                Sole engineer responsible for the school's full digital stack — website, student management system,
-                admissions portal, and internal tools. Architecting systems from scratch and maintaining production
-                deployments.
-              </p>
-            </div>
-          </li>
-
-          <li class="timeline__item reveal reveal-delay-1">
-            <div class="timeline__line">
-              <div class="timeline__dot"></div>
-              <div class="timeline__connector"></div>
-            </div>
-            <div>
-              <p class="timeline__date">2021 — Present</p>
-              <p class="timeline__role">Full Stack Developer</p>
-              <p class="timeline__company">Anobyte · Freelance &amp; Open Source</p>
-              <p class="timeline__desc">
-                Building web platforms, REST APIs, desktop software, and open-source tools.
-                128+ public repos, 12,000+ GitHub contributions. Notable projects: StockWise (C#),
-                Browser-Based Exam, ANAI (AI IDE), BloomCart, RepoRoom.
-              </p>
-            </div>
-          </li>
-
-          <li class="timeline__item reveal reveal-delay-2">
-            <div class="timeline__line">
-              <div class="timeline__dot"></div>
-              <div class="timeline__connector"></div>
-            </div>
-            <div>
-              <p class="timeline__date">2019 — 2021</p>
-              <p class="timeline__role">Self-directed Learning</p>
-              <p class="timeline__company">Computer Science &amp; Software Engineering</p>
-              <p class="timeline__desc">
-                Deep-dived into programming fundamentals, data structures, algorithms, and
-                systems design. Built the foundation across C, C++, Python, and JavaScript.
-              </p>
-            </div>
-          </li>
-
-        </ul>
+        <h2 class="display h-lg" id="cta-title">Have software to build?</h2>
+        <p>I take on freelance projects, full-time engineering roles and open-source collaboration. Tell me what you are building and I will reply by email.</p>
       </div>
-
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="contact.html">Get in touch <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ===== CTA ===== -->
-<section class="cta-banner">
-  <div class="container">
-    <h2 class="cta-banner__title">Want to work together?</h2>
-    <p class="cta-banner__sub">Open to freelance, full-time roles, and interesting technical collaborations.</p>
-    <a href="contact.html" class="btn-white">
-      Get In Touch <span class="material-symbols-outlined">arrow_forward</span>
-    </a>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="material-symbols-outlined">terminal</span>
-        Anointed Agunloye
-      </div>
-      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year>2026</span> Anointed Agunloye</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>
+      <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
   </div>
 </footer>
+<script src="data.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

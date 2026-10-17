@@ -1,484 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anointed Agunloye | Full Stack Developer</title>
-  <meta name="description" content="Anointed Agunloye — Full Stack Developer & Lead Software Engineer at Peter Harvard International Schools. Building web platforms, desktop software, and APIs."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anointed Agunloye | Full Stack Developer & Software Engineer</title>
+  <meta name="description" content="Portfolio of Anointed Agunloye, Lead Full Stack and Software Engineer at Anobyte Technologies. Web applications, APIs, real-time systems and developer tools.">
+  <link rel="canonical" href="https://anointed.is-a.dev/">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anointed Agunloye">
+  <meta property="og:title" content="Anointed Agunloye | Full Stack Developer & Software Engineer">
+  <meta property="og:description" content="Portfolio of Anointed Agunloye, Lead Full Stack and Software Engineer at Anobyte Technologies. Web applications, APIs, real-time systems and developer tools.">
+  <meta property="og:url" content="https://anointed.is-a.dev/">
+  <meta property="og:image" content="https://anointed.is-a.dev/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anointed Agunloye, Full Stack Developer and Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anointed Agunloye | Full Stack Developer & Software Engineer">
+  <meta name="twitter:description" content="Portfolio of Anointed Agunloye, Lead Full Stack and Software Engineer at Anobyte Technologies. Web applications, APIs, real-time systems and developer tools.">
+  <meta name="twitter:image" content="https://anointed.is-a.dev/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t); d.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://anointed.is-a.dev/#person",
+      "name": "Anointed Agunloye",
+      "url": "https://anointed.is-a.dev/",
+      "image": "https://anointed.is-a.dev/assets/portrait-640.webp",
+      "jobTitle": "Lead Full Stack & Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Anobyte Technologies",
+        "url": "https://anobyte.online"
+      },
+      "sameAs": [
+        "https://github.com/anointedthedeveloper",
+        "https://dev.to/anointedthedeveloper"
+      ],
+      "knowsAbout": [
+        "Full stack development",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "Real-time systems",
+        "Developer tooling"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://anointed.is-a.dev/#website",
+      "url": "https://anointed.is-a.dev/",
+      "name": "Anointed Agunloye",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://anointed.is-a.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
-
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-      <span class="material-symbols-outlined">terminal</span>
-      Anointed Agunloye
-    </a>
-    <nav aria-label="Primary navigation">
-      <ul class="navbar__nav">
-        <li><a href="index.html"    class="nav-link">Home</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="about.html"    class="nav-link">About</a></li>
-        <li><a href="contact.html"  class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="navbar__actions">
-      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
-        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
-      </button>
-      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
-      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open navigation menu">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Anointed Agunloye, home"><span class="brand__mark" aria-hidden="true">AA</span>Anointed Agunloye</a>
+    <nav class="nav" aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="index.html" aria-current="page">Home</a></li><li><a class="nav__link" href="projects.html">Projects</a></li><li><a class="nav__link" href="index.html#experience">Experience</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="contact.html">Contact</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg></a>
+      <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="icon i-moon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-moon"/></svg><svg class="icon i-sun" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-sun"/></svg></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Get in touch</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon i-menu" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-menu"/></svg><svg class="icon i-close" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-close"/></svg></button>
     </div>
-  </div>
-  <div id="mobile-menu" class="mobile-menu" role="navigation">
-    <a href="index.html"    class="mobile-nav-link">Home</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="about.html"    class="mobile-nav-link">About</a>
-    <a href="contact.html"  class="mobile-nav-link">Contact</a>
-    <a href="contact.html"  class="btn-primary" style="margin-top:.5rem;justify-content:center;">Hire Me</a>
   </div>
 </header>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
-  <div class="hero__grid-bg" aria-hidden="true"></div>
-  <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
-  <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
-
-  <div class="container">
-    <div class="hero__content">
-      <!-- Left -->
-      <div>
-        <div class="hero__badge">
-          <span class="hero__badge-dot" aria-hidden="true"></span>
-          Available for work
-        </div>
-
-        <h1 class="hero__title">
-          Anointed<br/><span>Agunloye</span>
-        </h1>
-
-        <p class="hero__description">
-          Full Stack Developer &amp; Lead Software Engineer at
-          <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer"
-             style="color:var(--primary);font-weight:600;">Peter Harvard International Schools</a>.
-          Building production software — from web platforms to desktop apps, real-time systems, and APIs.
-        </p>
-
-        <div class="hero__cta">
-          <a href="projects.html" class="btn-primary">
-            View Projects
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
-          <a href="contact.html" class="btn-outline">Get In Touch</a>
-        </div>
-
-        <div class="hero__stats">
-          <span class="hero__stat">
-            <span class="material-symbols-outlined">code</span>128+ repos
-          </span>
-          <span class="hero__stat">
-            <span class="material-symbols-outlined">commit</span>12k+ commits
-          </span>
-          <span class="hero__stat">
-            <span class="material-symbols-outlined">group</span>1k+ followers
-          </span>
-        </div>
-      </div>
-
-      <!-- Right — Photo -->
-      <div class="hero__photo">
-        <div class="hero__photo-wrap">
-          <img src="assets/image.png" alt="Anointed Agunloye"/>
-        </div>
-        <div class="hero__photo-glow-1" aria-hidden="true"></div>
-        <div class="hero__photo-glow-2" aria-hidden="true"></div>
-        <div class="hero__photo-badge">
-          <span class="material-symbols-outlined">work</span>
-          Lead Software Engineer
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== STATS BAR ===== -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-bar__grid">
-      <div class="stats-bar__item reveal">
-        <p class="stats-bar__item-value stat-counter" data-target="128" data-suffix="+">128+</p>
-        <p class="stats-bar__item-label">Public Repos</p>
-      </div>
-      <div class="stats-bar__item reveal reveal-delay-1">
-        <p class="stats-bar__item-value" style="color:var(--primary);">12k+</p>
-        <p class="stats-bar__item-label">Contributions</p>
-      </div>
-      <div class="stats-bar__item reveal reveal-delay-2">
-        <p class="stats-bar__item-value stat-counter" data-target="1" data-suffix="k+">1k+</p>
-        <p class="stats-bar__item-label">GitHub Followers</p>
-      </div>
-      <div class="stats-bar__item reveal reveal-delay-3">
-        <p class="stats-bar__item-value stat-counter" data-target="5" data-suffix="+">5+</p>
-        <p class="stats-bar__item-label">Years Coding</p>
-      </div>
-    </div>
-  </div>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="index.html" aria-current="page">Home<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="projects.html">Projects<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="index.html#experience">Experience<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="about.html">About<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="contact.html">Contact<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+  <a class="btn btn--primary" href="contact.html">Get in touch</a>
 </div>
-
-<!-- ===== FEATURED PROJECTS — 6 cards, 3×2 even grid ===== -->
-<section class="section" id="projects">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-header__text">
-        <p class="section-label">Selected Work</p>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Real software built for real use — from institutional systems to live web apps.</p>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="status rise" style="--i:0"><span class="status__dot" aria-hidden="true"></span>Open to projects and roles</p>
+      <h1 class="display h-xl rise" id="hero-title" style="--i:1">Anointed <em>Agunloye</em></h1>
+      <p class="hero__role rise" style="--i:2">Full Stack Developer · Software Engineer · Tool Builder &amp; Automator</p>
+      <p class="lead rise" style="--i:3">I design and ship complete software: React and TypeScript front ends, Node.js and Python back ends, real-time features, and the automation that keeps them running. Lead Full Stack and Software Engineer at Anobyte Technologies.</p>
+      <div class="hero__cta rise" style="--i:4">
+        <a class="btn btn--primary" href="projects.html">View projects <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub profile</a>
       </div>
-      <a href="projects.html" class="section-header__link hidden-mobile">
-        All projects <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
+      <p class="hero__facts rise" style="--i:5"><span><strong data-years>7+</strong> years building software</span><span>Nigeria · working remotely</span></p>
     </div>
-
-    <div class="projects-grid projects-grid--home">
-
-      <!-- 1 — Peter Harvard Schools Website (client work — most impressive) -->
-      <div class="project-card project-card--featured reveal">
-        <span class="project-card__badge">
-          <span class="material-symbols-outlined" style="font-size:.75rem;">star</span>
-          Client Work
-        </span>
-        <div class="project-card__icon" style="background:#fef3c7;color:#b45309;">
-          <span class="material-symbols-outlined">school</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Peter Harvard Schools</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">public</span>Live
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Official website for Peter Harvard International Schools — designed and built as Lead Software Engineer.
-          Full institutional platform with student portal, news, admissions, and school management features.
-        </p>
-        <div class="tags">
-          <span class="tag tag-amber">Web Platform</span>
-          <span class="tag tag-amber">Institution</span>
-          <span class="tag tag-amber">Full Stack</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Visit Site <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
+    <figure class="term rise" style="--i:3" aria-label="Terminal summary of my stack and featured projects">
+      <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>~/anointed — stack</span></div>
+      <div class="term__body" role="img" aria-label="cat stack.json: frontend React, Next.js, TypeScript; backend Node.js, Express, Python; data PostgreSQL, MongoDB, SQLite; realtime WebSockets, WebRTC, Supabase. ls projects/featured: reporoom, codesync, github-orbit, weblab-ide.">
+<p><span class="t-p">$</span> cat stack.json</p>
+<p>{</p>
+<p>  <span class="t-k">"frontend"</span>: ["React", "Next.js", "TypeScript"],</p>
+<p>  <span class="t-k">"backend"</span>:  ["Node.js", "Express", "Python"],</p>
+<p>  <span class="t-k">"data"</span>:     ["PostgreSQL", "MongoDB", "SQLite"],</p>
+<p>  <span class="t-k">"realtime"</span>: ["WebSockets", "WebRTC", "Supabase"]</p>
+<p>}</p>
+<p><span class="t-p">$</span> ls projects/featured</p>
+<p class="t-g">reporoom  codesync  github-orbit  weblab-ide</p>
+<p><span class="t-p">$</span> <span class="term__cursor"></span></p>
       </div>
+      <div class="term__id"><img src="assets/portrait-160.webp" width="160" height="160" alt="Portrait of Anointed Agunloye"><span><span class="t-n">Anointed Agunloye</span><span class="t-s">Anobyte Technologies · 2025 — Present</span></span></div>
+    </figure>
+  </div>
+</section>
 
-      <!-- 2 — ANAI (most technically impressive — AI IDE, live) -->
-      <div class="project-card project-card--featured reveal reveal-delay-1">
-        <span class="project-card__badge">
-          <span class="material-symbols-outlined" style="font-size:.75rem;">star</span>
-          AI
-        </span>
-        <div class="project-card__icon" style="background:#cffafe;color:#0e7490;">
-          <span class="material-symbols-outlined">smart_toy</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">ANAI — AI Agent IDE</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">star</span>5
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Web-based AI Agent IDE — a browser-native environment for building, running, and iterating on AI agents.
-          Full code editor, agent runner, and live output. Deployed on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-cyan">JavaScript</span>
-          <span class="tag tag-cyan">AI Agents</span>
-          <span class="tag tag-cyan">IDE</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://anai-nu.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/ANAI" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
+<section class="wrap" aria-label="At a glance">
+  <div class="metrics reveal">
+    <div class="metric"><p class="metric__value" data-years>7+</p><p class="metric__label">Years of software development, since 2019</p></div>
+    <div class="metric"><p class="metric__value is-loading" data-stat="repos">—</p><p class="metric__label">Public repositories on GitHub</p></div>
+    <div class="metric"><p class="metric__value is-loading" data-stat="followers">—</p><p class="metric__label">GitHub followers</p></div>
+    <div class="metric" data-tile="stars"><p class="metric__value is-loading" data-stat="stars">—</p><p class="metric__label">Stars across original repositories</p></div>
+    <div class="metric"><p class="metric__value" data-project-count>16</p><p class="metric__label">Projects documented on this site</p></div>
+  </div>
+  <p class="metrics-note"><span data-gh-note>Loading GitHub figures…</span></p>
+</section>
 
-      <!-- 3 — BloomCart (TypeScript, live demo, 16 stars) -->
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-card__icon" style="background:#ffe4e6;color:#be123c;">
-          <span class="material-symbols-outlined">local_florist</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">BloomCart</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">star</span>16
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Full-featured e-commerce flower shop — browse, customise, and order with product management,
-          order tracking, and delivery tools. Built with TypeScript &amp; Next.js. Live on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-rose">TypeScript</span>
-          <span class="tag tag-rose">Next.js</span>
-          <span class="tag tag-rose">E-commerce</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://bloom-cart-flower-shop.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/BloomCart-Flower-Shop" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 4 — StockWise (C# desktop, substantial real app) -->
-      <div class="project-card reveal reveal-delay-3">
-        <div class="project-card__icon" style="background:#dbeafe;color:#1d4ed8;">
-          <span class="material-symbols-outlined">inventory_2</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">StockWise</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">star</span>1
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Full-featured stock &amp; inventory management desktop application in C#.
-          Tracks products, raises low-stock alerts, records sales, and generates reports.
-          Built for real business deployment (294 MB codebase).
-        </p>
-        <div class="tags">
-          <span class="tag tag-blue">C#</span>
-          <span class="tag tag-blue">.NET</span>
-          <span class="tag tag-blue">Desktop</span>
-          <span class="tag tag-blue">SQL</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/stockwise" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 5 — RepoRoom (TypeScript, 15 stars, real-time) -->
-      <div class="project-card reveal reveal-delay-4">
-        <div class="project-card__icon" style="background:#ede9fe;color:#6d28d9;">
-          <span class="material-symbols-outlined">forum</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">RepoRoom</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">star</span>15
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Modern real-time chat application powered by WebSockets, built with TypeScript
-          for type-safe, low-latency messaging. Includes rooms, live presence, and message history.
-        </p>
-        <div class="tags">
-          <span class="tag tag-purple">TypeScript</span>
-          <span class="tag tag-purple">WebSockets</span>
-          <span class="tag tag-purple">Real-time</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/RepoRoom" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 6 — Browser-Based Exam (real institutional use, 36MB) -->
-      <div class="project-card reveal reveal-delay-5">
-        <div class="project-card__icon" style="background:#fef9c3;color:#a16207;">
-          <span class="material-symbols-outlined">quiz</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Browser-Based Exam</h3>
-          <span class="project-card__stars">
-            <span class="material-symbols-outlined">star</span>4
-          </span>
-        </div>
-        <p class="project-card__desc">
-          Complete browser-based examination system — countdown timer, question randomisation,
-          auto-scoring, and result reporting. Designed for real institutional deployment with a 36 MB codebase.
-        </p>
-        <div class="tags">
-          <span class="tag tag-amber">JavaScript</span>
-          <span class="tag tag-amber">HTML/CSS</span>
-          <span class="tag tag-amber">Education</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/Browser-Based-Exam" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /.projects-grid -->
-
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="projects.html" class="btn-outline">
-        <span class="material-symbols-outlined">grid_view</span>
-        View all 14 projects
-      </a>
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Selected work</p><h2 class="display h-lg" id="projects-title">Projects worth opening</h2>
+        <p class="lead">Chosen for engineering depth: real-time sync, authentication and access rules, automation and tooling. Every link points to the actual repository.</p></div>
+      <a class="more-link" href="projects.html">All projects <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+    </div>
+    <div class="projects projects--home" data-projects="home">
+      <noscript><p>Projects are listed on <a class="link" href="https://github.com/anointedthedeveloper?tab=repositories">GitHub</a>.</p></noscript>
     </div>
   </div>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
-<section class="section section--alt">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="section-label">Experience</p>
-      <h2 class="section-title">Where I've Worked</h2>
-    </div>
-    <div class="grid-2">
-      <div class="experience-card experience-card--featured reveal">
-        <div class="experience-card__header">
-          <div class="experience-card__icon" style="background:#fef3c7;color:#b45309;">
-            <span class="material-symbols-outlined">school</span>
-          </div>
-          <div class="experience-card__meta">
-            <p class="experience-card__role">Lead Software Engineer</p>
-            <p class="experience-card__company">Peter Harvard International Schools</p>
-            <p class="experience-card__period">2023 — Present · Full-time</p>
-          </div>
-        </div>
-        <p class="experience-card__desc">
-          Architecting and maintaining the school's digital infrastructure — including the official website,
-          student management systems, and internal tools. Sole engineer responsible for all software decisions.
-        </p>
-        <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer" class="experience-card__link">
-          Visit peterharvardschools.cloud <span class="material-symbols-outlined">open_in_new</span>
-        </a>
+<section class="section" id="client-work" aria-labelledby="clients-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Client &amp; collaboration work</p><h2 class="display h-md" id="clients-title">Live sites for real organisations</h2>
+      <p class="lead">Business websites and apps that are running now. Where the source is not public, no repository link is shown.</p></div>
+      <a class="more-link" href="projects.html#client">See all <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a></div>
+    <div class="projects projects--3" data-projects="client"></div>
+  </div>
+</section>
+
+<section class="section section--tint" id="expertise" aria-labelledby="skills-title">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Technical expertise</p><h2 class="display h-lg" id="skills-title">What I build with</h2>
+      <p class="lead">Grouped by the kind of work, and limited to tools that appear in repositories I have written.</p></div></div>
+    <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Component-driven, responsive interfaces, including real-time and installable (PWA) apps.</p><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Monaco Editor</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>APIs, real-time servers, authentication and background jobs.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">WebSockets</span><span class="chip">Socket.io</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Relational and document stores, with access rules enforced at the database.</p><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Row-level security</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Yjs (CRDT)</span></div></div><div class="skill reveal"><h3>Tooling, infrastructure &amp; automation</h3><p>The pipeline around the code: deploys, schedulers and developer tooling.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Docker</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">Cron jobs</span><span class="chip">CLI tools (npm / npx)</span></div></div></div>
+<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET 8 (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
+  </div>
+</section>
+
+<section class="section" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Experience</p><h2 class="display h-lg" id="exp-title">Roles and journey</h2>
+      <p class="lead">Formal roles are labelled separately from independent and open-source work.</p></div>
+      <a class="more-link" href="about.html#experience">Full experience <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a></div>
+    <ol class="timeline">
+      <li class="tl reveal">
+  <p class="tl__date">2025 — Present</p>
+  <div>
+    <p class="tl__kind">Employment</p>
+    <h3 class="tl__role">Lead Full Stack &amp; Software Engineer</h3>
+    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a></p>
+    <ul><li>Lead full stack and software engineering across web applications, APIs and internal tools.</li><li>Public work in this period includes RepoRoom, CodeSync, WebLab IDE and the Nexus CLI.</li></ul>
+  </div>
+</li>
+      <li class="tl reveal">
+  <p class="tl__date">Ongoing</p>
+  <div>
+    <p class="tl__kind">Client engagement</p>
+    <h3 class="tl__role">Lead Software Engineer</h3>
+    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a></p>
+    <ul><li>Builds and maintains the school’s website and related systems, including a transcript portal.</li></ul>
+  </div>
+</li>
+      <li class="tl reveal">
+  <p class="tl__date">2021 — Present</p>
+  <div>
+    <p class="tl__kind">Independent</p>
+    <h3 class="tl__role">Full Stack Developer</h3>
+    <p class="tl__org">Freelance and open source</p>
+    <ul><li>Web platforms, REST APIs, desktop software and developer tools for clients and public repositories.</li></ul>
+  </div>
+</li>
+      <li class="tl reveal">
+  <p class="tl__date">2019 — 2021</p>
+  <div>
+    <p class="tl__kind">Learning</p>
+    <h3 class="tl__role">Self-directed study</h3>
+    <p class="tl__org">Computer science and software engineering</p>
+    <ul><li>Programming fundamentals, data structures and algorithms, working in C, C++, Python and JavaScript.</li></ul>
+  </div>
+</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--tint" aria-labelledby="act-title">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">GitHub activity</p><h2 class="display h-lg" id="act-title">Recently pushed</h2>
+      <p class="lead">The six most recently updated original repositories. Public repositories only: private work and contribution counts are not shown.</p></div>
+      <a class="more-link" href="https://github.com/anointedthedeveloper?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories <svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-up-right"/></svg></a></div>
+    <ul class="activity" data-activity aria-live="polite"><li><div class="skel"></div><div class="skel"></div><div class="skel"></div></li></ul>
+  </div>
+</section>
+
+<section class="section cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta__box reveal">
+      <div>
+        <h2 class="display h-lg" id="cta-title">Have software to build?</h2>
+        <p>I take on freelance projects, full-time engineering roles and open-source collaboration. Tell me what you are building and I will reply by email.</p>
       </div>
-      <div class="experience-card reveal reveal-delay-1">
-        <div class="experience-card__header">
-          <div class="experience-card__icon" style="background:#cffafe;color:#0e7490;">
-            <span class="material-symbols-outlined">laptop_mac</span>
-          </div>
-          <div class="experience-card__meta">
-            <p class="experience-card__role">Full Stack Developer</p>
-            <p class="experience-card__company">Anobyte · Freelance</p>
-            <p class="experience-card__period">2021 — Present</p>
-          </div>
-        </div>
-        <p class="experience-card__desc">
-          Building web platforms, REST APIs, desktop software, and open-source tools for clients and personal projects.
-          128+ public repositories, 12,000+ GitHub contributions in the past year.
-        </p>
-        <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer" class="experience-card__link">
-          Visit anobyte.online <span class="material-symbols-outlined">open_in_new</span>
-        </a>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="contact.html">Get in touch <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== TECH STACK ===== -->
-<section class="section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="section-label">Tech Stack</p>
-      <h2 class="section-title">What I Build With</h2>
-    </div>
-    <div class="grid-4">
-      <div class="skill-card reveal">
-        <span class="material-symbols-outlined">layers</span>
-        <p class="skill-card__title">Frontend</p>
-        <div class="tags">
-          <span class="tag tag-blue">React</span>
-          <span class="tag tag-blue">Next.js</span>
-          <span class="tag tag-blue">TypeScript</span>
-          <span class="tag tag-blue">Tailwind</span>
-          <span class="tag tag-blue">HTML/CSS</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-1">
-        <span class="material-symbols-outlined">dns</span>
-        <p class="skill-card__title">Backend</p>
-        <div class="tags">
-          <span class="tag tag-green">Node.js</span>
-          <span class="tag tag-green">Python</span>
-          <span class="tag tag-green">C#</span>
-          <span class="tag tag-green">PostgreSQL</span>
-          <span class="tag tag-green">MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-2">
-        <span class="material-symbols-outlined">phone_android</span>
-        <p class="skill-card__title">Mobile &amp; Desktop</p>
-        <div class="tags">
-          <span class="tag tag-purple">Kotlin</span>
-          <span class="tag tag-purple">.NET</span>
-          <span class="tag tag-purple">C++</span>
-          <span class="tag tag-purple">Android</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-3">
-        <span class="material-symbols-outlined">build</span>
-        <p class="skill-card__title">Tools &amp; Cloud</p>
-        <div class="tags">
-          <span class="tag tag-gray">Git</span>
-          <span class="tag tag-gray">Docker</span>
-          <span class="tag tag-gray">AWS</span>
-          <span class="tag tag-gray">Vercel</span>
-          <span class="tag tag-gray">CI/CD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="cta-banner">
-  <div class="container">
-    <h2 class="cta-banner__title">Let's build something great</h2>
-    <p class="cta-banner__sub">
-      Open to freelance, full-time roles, and technical collaborations.
-      Based in Nigeria — working remotely worldwide.
-    </p>
-    <a href="contact.html" class="btn-white">
-      Get In Touch
-      <span class="material-symbols-outlined">arrow_forward</span>
-    </a>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="material-symbols-outlined">terminal</span>
-        Anointed Agunloye
-      </div>
-      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
-        <a href="https://peterharvardschools.cloud"         target="_blank" rel="noopener noreferrer">Peter Harvard</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year>2026</span> Anointed Agunloye</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>
+      <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
   </div>
 </footer>
-
+<script src="data.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

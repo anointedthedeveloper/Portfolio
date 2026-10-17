@@ -1,240 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Anointed Agunloye</title>
-  <meta name="description" content="Privacy Policy for Anointed Agunloye's portfolio website."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <style>
-    .policy-body { max-width: 760px; margin: 0 auto; }
-    .policy-body h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.25rem; font-weight: 700;
-      color: var(--text); margin: 2.5rem 0 .75rem;
-    }
-    .policy-body h2:first-child { margin-top: 0; }
-    .policy-body p {
-      font-size: .9375rem; color: var(--text-muted);
-      line-height: 1.75; margin-bottom: .875rem;
-    }
-    .policy-body ul {
-      margin: .5rem 0 .875rem 1.25rem;
-      display: flex; flex-direction: column; gap: .375rem;
-    }
-    .policy-body ul li {
-      font-size: .9375rem; color: var(--text-muted); line-height: 1.7;
-    }
-    .policy-body a { color: var(--primary); }
-    .policy-body a:hover { text-decoration: underline; }
-    .policy-meta {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .5rem 1rem; background: var(--primary-light);
-      border-radius: var(--radius-md); margin-bottom: 2.5rem;
-      font-size: .8125rem; font-weight: 600; color: var(--primary);
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .policy-divider {
-      border: none; border-top: 1px solid var(--border); margin: 2rem 0;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy | Anointed Agunloye</title>
+  <meta name="description" content="How this portfolio website handles your information.">
+  <link rel="canonical" href="https://anointed.is-a.dev/privacy.html">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anointed Agunloye">
+  <meta property="og:title" content="Privacy | Anointed Agunloye">
+  <meta property="og:description" content="How this portfolio website handles your information.">
+  <meta property="og:url" content="https://anointed.is-a.dev/privacy.html">
+  <meta property="og:image" content="https://anointed.is-a.dev/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anointed Agunloye, Full Stack Developer and Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy | Anointed Agunloye">
+  <meta name="twitter:description" content="How this portfolio website handles your information.">
+  <meta name="twitter:image" content="https://anointed.is-a.dev/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t); d.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-      <span class="material-symbols-outlined">terminal</span>
-      Anointed Agunloye
-    </a>
-    <nav aria-label="Primary navigation">
-      <ul class="navbar__nav">
-        <li><a href="index.html"    class="nav-link">Home</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="about.html"    class="nav-link">About</a></li>
-        <li><a href="contact.html"  class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="navbar__actions">
-      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
-        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
-      </button>
-      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
-      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Anointed Agunloye, home"><span class="brand__mark" aria-hidden="true">AA</span>Anointed Agunloye</a>
+    <nav class="nav" aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="projects.html">Projects</a></li><li><a class="nav__link" href="index.html#experience">Experience</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="contact.html">Contact</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg></a>
+      <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="icon i-moon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-moon"/></svg><svg class="icon i-sun" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-sun"/></svg></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Get in touch</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon i-menu" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-menu"/></svg><svg class="icon i-close" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-close"/></svg></button>
     </div>
-  </div>
-  <div id="mobile-menu" class="mobile-menu">
-    <a href="index.html"    class="mobile-nav-link">Home</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="about.html"    class="mobile-nav-link">About</a>
-    <a href="contact.html"  class="mobile-nav-link">Contact</a>
   </div>
 </header>
-
-<!-- ===== PAGE HERO ===== -->
-<section class="page-hero">
-  <div class="container">
-    <p class="section-label">Legal</p>
-    <h1 class="section-title">Privacy Policy</h1>
-    <p class="section-subtitle">
-      How this website handles your information.
-    </p>
-  </div>
-</section>
-
-<!-- ===== POLICY CONTENT ===== -->
-<section class="section">
-  <div class="container">
-    <div class="policy-body">
-
-      <div class="policy-meta">
-        <span class="material-symbols-outlined" style="font-size:1rem;">calendar_today</span>
-        Last updated: July 13, 2026
-      </div>
-
-      <h2>1. Who We Are</h2>
-      <p>
-        This is the personal portfolio website of <strong>Anointed Agunloye</strong>, a Full Stack Developer
-        and Lead Software Engineer based in Nigeria. The website is hosted at this domain and serves to
-        showcase projects, skills, and experience to potential clients and employers.
-      </p>
-      <p>
-        For any privacy-related questions, contact:
-        <a href="mailto:contact@anobyte.online">contact@anobyte.online</a>
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>2. What Information We Collect</h2>
-      <p>This website collects the following information only when you voluntarily submit the contact form:</p>
-      <ul>
-        <li><strong>Full name</strong> — so I know who I'm speaking with.</li>
-        <li><strong>Email address</strong> — to reply to your message.</li>
-        <li><strong>Phone number</strong> — optional, if provided for call/WhatsApp contact.</li>
-        <li><strong>Subject and message content</strong> — the inquiry you send.</li>
-        <li><strong>Engagement type</strong> — the project/role category you select.</li>
-      </ul>
-      <p>
-        No personal data is collected from visitors who simply browse this site without submitting the form.
-        This website does <strong>not</strong> use cookies for tracking, advertising, or analytics.
-        No third-party tracking scripts are embedded.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>3. How We Use Your Information</h2>
-      <p>Information submitted through the contact form is used solely to:</p>
-      <ul>
-        <li>Respond to your inquiry or project request.</li>
-        <li>Discuss potential collaboration, employment, or freelance engagements.</li>
-        <li>Follow up if you've requested it.</li>
-      </ul>
-      <p>
-        Your information will <strong>not</strong> be sold, shared with third parties, used for marketing,
-        or added to any mailing list without your explicit consent.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>4. Data Storage and Security</h2>
-      <p>
-        Contact form submissions are sent directly via email and are stored only in the email inbox of
-        Anointed Agunloye. No database, CRM, or third-party form service stores your data on this site's behalf.
-      </p>
-      <p>
-        Reasonable measures are taken to keep your information secure, including using HTTPS for all data
-        transmission. However, no method of electronic transmission or storage is 100% secure.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>5. Your Rights</h2>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Request a copy of any personal data held about you.</li>
-        <li>Ask for your personal data to be corrected or deleted.</li>
-        <li>Withdraw consent for further communication at any time.</li>
-      </ul>
-      <p>
-        To exercise any of these rights, email
-        <a href="mailto:contact@anobyte.online">contact@anobyte.online</a> with your request.
-        All requests will be handled within 30 days.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>6. External Links</h2>
-      <p>
-        This website contains links to external sites such as GitHub, Dev.to, Vercel, and
-        peterharvardschools.cloud. These external sites have their own privacy policies and
-        Anointed Agunloye is not responsible for their content or data practices.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>7. Children's Privacy</h2>
-      <p>
-        This website is not directed at individuals under the age of 13. If you believe a minor has
-        submitted personal information through this site, please contact us immediately at
-        <a href="mailto:contact@anobyte.online">contact@anobyte.online</a> so it can be removed.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>8. Changes to This Policy</h2>
-      <p>
-        This Privacy Policy may be updated from time to time. Any changes will be reflected on this page
-        with an updated "Last updated" date at the top. Continued use of this website after changes are
-        posted constitutes acceptance of the revised policy.
-      </p>
-
-      <hr class="policy-divider"/>
-
-      <h2>9. Contact</h2>
-      <p>For any questions about this Privacy Policy:</p>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:contact@anobyte.online">contact@anobyte.online</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+2348101209470">+234 810 120 9470</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+2349016471351">+234 901 647 1351</a></li>
-        <li><strong>Website:</strong> <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">anobyte.online</a></li>
-      </ul>
-
-      <div style="margin-top:3rem;padding:1.5rem;background:var(--surface-2);border-radius:var(--radius-lg);border:1px solid var(--border);">
-        <p style="font-size:.875rem;color:var(--text-muted);margin:0;text-align:center;">
-          This Privacy Policy applies only to the personal portfolio website of Anointed Agunloye.
-          It does not cover services, products, or websites owned by third parties linked from this site.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="material-symbols-outlined">terminal</span>
-        Anointed Agunloye
-      </div>
-      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="index.html">Home<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="projects.html">Projects<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="index.html#experience">Experience<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="about.html">About<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="contact.html">Contact<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+  <a class="btn btn--primary" href="contact.html">Get in touch</a>
+</div>
+<main id="main">
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Legal</p><h1 class="display h-xl">Privacy</h1>
+<p class="lead">Last updated 17 October 2026.</p></div></section>
+<section class="section" style="padding-top:2.5rem"><div class="wrap"><div class="policy">
+<h2>Who runs this site</h2>
+<p>This is the personal portfolio of Anointed Agunloye, a software engineer based in Nigeria. Questions about privacy: <a href="mailto:contact@anobyte.online">contact@anobyte.online</a>.</p>
+<h2>What this site stores</h2>
+<ul>
+<li>No analytics, advertising scripts or tracking cookies.</li>
+<li>Your browser stores a theme preference (<code>theme</code>) and a cached copy of public GitHub statistics (<code>gh-cache-v1</code>) in local storage. Neither leaves your device and you can clear them at any time.</li>
+</ul>
+<h2>Contact form</h2>
+<p>The form does not send data to a server. When you submit it, your own email app opens with your message pre-filled. Nothing is sent until you send that email. If you do, I use your name, email address and message only to reply, and I do not share them or add you to any mailing list.</p>
+<h2>Third-party requests</h2>
+<ul>
+<li><strong>GitHub API</strong>: your browser requests public profile and repository data from api.github.com to display live statistics. GitHub receives your IP address as part of that request.</li>
+<li><strong>Google Fonts</strong>: fonts are loaded from fonts.googleapis.com and fonts.gstatic.com.</li>
+<li><strong>External links</strong> (GitHub, Dev.to, live project demos) are governed by those sites’ own policies.</li>
+</ul>
+<h2>Your rights</h2>
+<p>You can ask me to share, correct or delete any email correspondence we have had by writing to <a href="mailto:contact@anobyte.online">contact@anobyte.online</a>. I will respond within 30 days.</p>
+<h2>Children</h2>
+<p>This site is not directed at children under 13.</p>
+<h2>Changes</h2>
+<p>Updates will appear on this page with a new date above.</p>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year>2026</span> Anointed Agunloye</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>
+      <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
   </div>
 </footer>
-
+<script src="data.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
