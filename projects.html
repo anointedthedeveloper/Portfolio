@@ -1,499 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Anointed Agunloye</title>
-  <meta name="description" content="All 14+ curated projects by Anointed Agunloye — web apps, desktop software, APIs, and tools."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Full stack, real-time, developer-tool and API projects by Anointed Agunloye, with source code and live demos where they exist.">
+  <link rel="canonical" href="https://anointed.is-a.dev/projects.html">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anointed Agunloye">
+  <meta property="og:title" content="Projects | Anointed Agunloye">
+  <meta property="og:description" content="Full stack, real-time, developer-tool and API projects by Anointed Agunloye, with source code and live demos where they exist.">
+  <meta property="og:url" content="https://anointed.is-a.dev/projects.html">
+  <meta property="og:image" content="https://anointed.is-a.dev/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anointed Agunloye, Full Stack Developer and Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects | Anointed Agunloye">
+  <meta name="twitter:description" content="Full stack, real-time, developer-tool and API projects by Anointed Agunloye, with source code and live demos where they exist.">
+  <meta name="twitter:image" content="https://anointed.is-a.dev/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t); d.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo">
-      <span class="material-symbols-outlined">terminal</span>
-      Anointed Agunloye
-    </a>
-    <nav aria-label="Primary navigation">
-      <ul class="navbar__nav">
-        <li><a href="index.html"    class="nav-link">Home</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="about.html"    class="nav-link">About</a></li>
-        <li><a href="contact.html"  class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="navbar__actions">
-      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
-        <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
-      </button>
-      <a href="contact.html" class="btn-primary btn-hire-nav">Hire Me</a>
-      <button id="mobile-menu-btn" class="btn-menu" aria-label="Open menu">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Anointed Agunloye, home"><span class="brand__mark" aria-hidden="true">AA</span>Anointed Agunloye</a>
+    <nav class="nav" aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="projects.html" aria-current="page">Projects</a></li><li><a class="nav__link" href="index.html#experience">Experience</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="contact.html">Contact</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg></a>
+      <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="icon i-moon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-moon"/></svg><svg class="icon i-sun" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-sun"/></svg></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Get in touch</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon i-menu" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-menu"/></svg><svg class="icon i-close" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-close"/></svg></button>
     </div>
-  </div>
-  <div id="mobile-menu" class="mobile-menu">
-    <a href="index.html"    class="mobile-nav-link">Home</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="about.html"    class="mobile-nav-link">About</a>
-    <a href="contact.html"  class="mobile-nav-link">Contact</a>
-    <a href="contact.html"  class="btn-primary" style="margin-top:.5rem;justify-content:center;">Hire Me</a>
   </div>
 </header>
-
-<!-- ===== PAGE HERO ===== -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="index.html">Home<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="projects.html" aria-current="page">Projects<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="index.html#experience">Experience<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="about.html">About<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a><a href="contact.html">Contact<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+  <a class="btn btn--primary" href="contact.html">Get in touch</a>
+</div>
+<main id="main">
 <section class="page-hero">
-  <div class="container">
-    <p class="section-label">My Work</p>
-    <h1 class="section-title">All Projects</h1>
-    <p class="section-subtitle">
-      14 curated projects from
-      <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"
-         style="color:var(--primary);font-weight:600;">128+ public repos</a>
-      — software, web apps, tools, and APIs.
-    </p>
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h1 class="display h-xl">Things I have built</h1>
+    <p class="lead">A curated set from my public repositories. Screenshots are of the running apps; panels with code-style text summarise the project’s README where I have no verified screenshot. Stars and forks come live from GitHub.</p>
   </div>
 </section>
-
-<!-- ===== PROJECTS ===== -->
-<section class="section">
-  <div class="container">
-
-    <!-- Filter tabs -->
-    <div class="filter-tabs" role="tablist" aria-label="Filter projects">
-      <button class="filter-tab active" data-filter="all"      role="tab">All (14)</button>
-      <button class="filter-tab"        data-filter="client"   role="tab">Client Work</button>
-      <button class="filter-tab"        data-filter="software" role="tab">Software</button>
-      <button class="filter-tab"        data-filter="web"      role="tab">Web Apps</button>
-      <button class="filter-tab"        data-filter="tools"    role="tab">Tools</button>
-      <button class="filter-tab"        data-filter="api"      role="tab">APIs</button>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter projects by category" data-filters></div>
+      <div class="search"><label class="sr-only" for="project-search">Search projects</label><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-search"/></svg><input id="project-search" type="search" placeholder="Search name, stack…" autocomplete="off" data-search></div>
+      <div class="field-inline"><label for="project-sort" class="muted" style="font-size:.875rem">Sort</label>
+        <select id="project-sort" data-sort><option value="curated">Curated</option><option value="stars" disabled data-needs-gh>Most starred</option><option value="recent" disabled data-needs-gh>Recently pushed</option></select></div>
     </div>
-
-    <!-- 14 cards = 3 cols × 4 rows + 2 = not perfectly even.
-         We use 2 cols on wide so 14 = 7 rows, or 3 cols = 4r+2.
-         Easiest even: show 14 in 2 cols on tablets, 1 col mobile — grid handles it. -->
-    <div class="projects-grid">
-
-      <!-- ── CLIENT WORK ─────────────────────── -->
-
-      <!-- 1. Peter Harvard -->
-      <div class="project-card project-card--featured reveal" data-category="client">
-        <span class="project-card__badge">
-          <span class="material-symbols-outlined" style="font-size:.75rem;">verified</span>
-          Client · Live
-        </span>
-        <div class="project-card__icon" style="background:#fef3c7;color:#b45309;">
-          <span class="material-symbols-outlined">school</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Peter Harvard International Schools</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">public</span>Live</span>
-        </div>
-        <p class="project-card__desc">
-          Official institutional website designed and built as Lead Software Engineer.
-          Includes student portal, admissions, school news, and management features.
-        </p>
-        <div class="tags">
-          <span class="tag tag-amber">Full Stack</span>
-          <span class="tag tag-amber">Institution</span>
-          <span class="tag tag-amber">Web Platform</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Visit Site <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
+    <p class="result-count" role="status" aria-live="polite" data-count></p>
+    <div class="projects" data-projects="all">
+      <noscript><p>This page lists projects with JavaScript. The full list is on <a class="link" href="https://github.com/anointedthedeveloper?tab=repositories">GitHub</a>.</p></noscript>
+    </div>
+    <div class="empty" data-empty hidden><p>No projects match that search.</p><p style="margin-top:1rem"><button class="btn btn--sm" type="button" data-reset>Clear filters</button></p></div>
+    <p style="margin-top:2.5rem"><a class="more-link" href="https://github.com/anointedthedeveloper?tab=repositories" target="_blank" rel="noopener noreferrer">Browse every repository on GitHub <svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-up-right"/></svg></a></p>
+  </div>
+</section>
+<section class="section cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta__box reveal">
+      <div>
+        <h2 class="display h-lg" id="cta-title">Have software to build?</h2>
+        <p>I take on freelance projects, full-time engineering roles and open-source collaboration. Tell me what you are building and I will reply by email.</p>
       </div>
-
-      <!-- ── WEB APPS ─────────────────────────── -->
-
-      <!-- 2. ANAI -->
-      <div class="project-card project-card--featured reveal reveal-delay-1" data-category="web">
-        <span class="project-card__badge">
-          <span class="material-symbols-outlined" style="font-size:.75rem;">star</span>
-          AI
-        </span>
-        <div class="project-card__icon" style="background:#cffafe;color:#0e7490;">
-          <span class="material-symbols-outlined">smart_toy</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">ANAI — AI Agent IDE</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>5</span>
-        </div>
-        <p class="project-card__desc">
-          Web-based AI Agent IDE — browser-native environment for building, running, and iterating on AI agents.
-          Full code editor, agent runner, and live output. Deployed on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-cyan">JavaScript</span>
-          <span class="tag tag-cyan">AI Agents</span>
-          <span class="tag tag-cyan">IDE</span>
-          <span class="tag tag-cyan">Vercel</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://anai-nu.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/ANAI" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="contact.html">Get in touch <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
       </div>
-
-      <!-- 3. BloomCart -->
-      <div class="project-card reveal reveal-delay-2" data-category="web">
-        <div class="project-card__icon" style="background:#ffe4e6;color:#be123c;">
-          <span class="material-symbols-outlined">local_florist</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">BloomCart</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>16</span>
-        </div>
-        <p class="project-card__desc">
-          Full-featured e-commerce flower shop — browse, customise, and order with product management,
-          order tracking, and delivery tools. TypeScript &amp; Next.js. Live on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-rose">TypeScript</span>
-          <span class="tag tag-rose">Next.js</span>
-          <span class="tag tag-rose">E-commerce</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://bloom-cart-flower-shop.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/BloomCart-Flower-Shop" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 4. RepoRoom -->
-      <div class="project-card reveal reveal-delay-3" data-category="web">
-        <div class="project-card__icon" style="background:#ede9fe;color:#6d28d9;">
-          <span class="material-symbols-outlined">forum</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">RepoRoom</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>15</span>
-        </div>
-        <p class="project-card__desc">
-          Real-time chat application powered by WebSockets, built with TypeScript.
-          Rooms, live presence, message history, and low-latency messaging.
-        </p>
-        <div class="tags">
-          <span class="tag tag-purple">TypeScript</span>
-          <span class="tag tag-purple">WebSockets</span>
-          <span class="tag tag-purple">Real-time</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/RepoRoom" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 5. Axiom UI -->
-      <div class="project-card reveal" data-category="web">
-        <div class="project-card__icon" style="background:#ede9fe;color:#7c3aed;">
-          <span class="material-symbols-outlined">palette</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Axiom UI</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>14</span>
-        </div>
-        <p class="project-card__desc">
-          MIT-licensed TypeScript UI component library template — clean, extensible, and production-ready.
-          Used as a starter by other developers.
-        </p>
-        <div class="tags">
-          <span class="tag tag-purple">TypeScript</span>
-          <span class="tag tag-purple">UI Library</span>
-          <span class="tag tag-purple">MIT</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/Axiom-UI" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 6. Alpine Ascents -->
-      <div class="project-card reveal reveal-delay-1" data-category="web">
-        <div class="project-card__icon" style="background:#dcfce7;color:#16a34a;">
-          <span class="material-symbols-outlined">landscape</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Alpine Ascents</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>16</span>
-        </div>
-        <p class="project-card__desc">
-          Immersive mountain adventures landing page with smooth animations and parallax visuals.
-          Deployed on GitHub Pages (193 MB asset-rich project).
-        </p>
-        <div class="tags">
-          <span class="tag tag-green">HTML</span>
-          <span class="tag tag-green">CSS</span>
-          <span class="tag tag-green">JavaScript</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://anointedthedeveloper.github.io/Alpine-Ascents/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/Alpine-Ascents" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- ── SOFTWARE ──────────────────────────── -->
-
-      <!-- 7. StockWise -->
-      <div class="project-card reveal reveal-delay-2" data-category="software">
-        <div class="project-card__icon" style="background:#dbeafe;color:#1d4ed8;">
-          <span class="material-symbols-outlined">inventory_2</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">StockWise</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>1</span>
-        </div>
-        <p class="project-card__desc">
-          Full-featured stock &amp; inventory management desktop app in C# .NET.
-          Product tracking, low-stock alerts, sales records, and reports. 294 MB codebase.
-        </p>
-        <div class="tags">
-          <span class="tag tag-blue">C#</span>
-          <span class="tag tag-blue">.NET</span>
-          <span class="tag tag-blue">Desktop</span>
-          <span class="tag tag-blue">SQL</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/stockwise" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 8. Browser-Based Exam -->
-      <div class="project-card reveal reveal-delay-3" data-category="software">
-        <div class="project-card__icon" style="background:#fef9c3;color:#a16207;">
-          <span class="material-symbols-outlined">quiz</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Browser-Based Exam</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>4</span>
-        </div>
-        <p class="project-card__desc">
-          Complete browser-based examination system — timer, question randomisation, auto-scoring,
-          and result reporting. Built for real institutional deployment (36 MB).
-        </p>
-        <div class="tags">
-          <span class="tag tag-amber">JavaScript</span>
-          <span class="tag tag-amber">HTML/CSS</span>
-          <span class="tag tag-amber">Education</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/Browser-Based-Exam" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 9. DocVerse -->
-      <div class="project-card reveal" data-category="software">
-        <div class="project-card__icon" style="background:#dcfce7;color:#15803d;">
-          <span class="material-symbols-outlined">description</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">DocVerse</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>–</span>
-        </div>
-        <p class="project-card__desc">
-          Kotlin Android document management app. Organise, search, and view documents on mobile
-          with a clean Material Design interface.
-        </p>
-        <div class="tags">
-          <span class="tag tag-green">Kotlin</span>
-          <span class="tag tag-green">Android</span>
-          <span class="tag tag-green">Mobile</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/DocVerse" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 10. AD-GUI -->
-      <div class="project-card reveal reveal-delay-1" data-category="software">
-        <div class="project-card__icon" style="background:#fce7f3;color:#9d174d;">
-          <span class="material-symbols-outlined">desktop_windows</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">AD-GUI</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>2</span>
-        </div>
-        <p class="project-card__desc">
-          Python desktop GUI application — a substantial local tool (2 MB) built with Python's UI libraries,
-          featuring a modern interface and clean architecture.
-        </p>
-        <div class="tags">
-          <span class="tag tag-rose">Python</span>
-          <span class="tag tag-rose">GUI</span>
-          <span class="tag tag-rose">Desktop</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/AD-GUI" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- ── TOOLS ──────────────────────────────── -->
-
-      <!-- 11. github-orbit -->
-      <div class="project-card reveal reveal-delay-2" data-category="tools">
-        <div class="project-card__icon" style="background:#e0f2fe;color:#0369a1;">
-          <span class="material-symbols-outlined">hub</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">github-orbit</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>9</span>
-        </div>
-        <p class="project-card__desc">
-          Safely automate GitHub follower growth — built with rate-limiting and bot detection
-          to stay within platform policies. 1 fork.
-        </p>
-        <div class="tags">
-          <span class="tag tag-cyan">JavaScript</span>
-          <span class="tag tag-cyan">GitHub API</span>
-          <span class="tag tag-cyan">Automation</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/github-orbit" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 12. Smart README Generator -->
-      <div class="project-card reveal reveal-delay-3" data-category="tools">
-        <div class="project-card__icon" style="background:#fef9c3;color:#a16207;">
-          <span class="material-symbols-outlined">auto_fix_high</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Smart README Generator</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>3</span>
-        </div>
-        <p class="project-card__desc">
-          Automatically generate professional README files for any repository using intelligent
-          templates and project analysis.
-        </p>
-        <div class="tags">
-          <span class="tag tag-amber">JavaScript</span>
-          <span class="tag tag-amber">CLI</span>
-          <span class="tag tag-amber">Dev Tool</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/anointedthedeveloper/Smart-README-Generator" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- ── APIs ───────────────────────────────── -->
-
-      <!-- 13. Anivault API -->
-      <div class="project-card reveal" data-category="api">
-        <div class="project-card__icon" style="background:#f0fdf4;color:#15803d;">
-          <span class="material-symbols-outlined">api</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">Anivault API</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>7</span>
-        </div>
-        <p class="project-card__desc">
-          Public REST API for streaming and downloading anime content.
-          Clean endpoint documentation and deployed on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-green">Python</span>
-          <span class="tag tag-green">REST API</span>
-          <span class="tag tag-green">Vercel</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://anivault-api.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live API <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/Anivault-api" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 14. API Tester -->
-      <div class="project-card reveal reveal-delay-1" data-category="api">
-        <div class="project-card__icon" style="background:#cffafe;color:#0891b2;">
-          <span class="material-symbols-outlined">network_check</span>
-        </div>
-        <div class="project-card__header">
-          <h3 class="project-card__title">API Tester</h3>
-          <span class="project-card__stars"><span class="material-symbols-outlined">star</span>1</span>
-        </div>
-        <p class="project-card__desc">
-          Lightweight browser-based API testing tool — send requests, inspect responses,
-          and debug endpoints without leaving the browser. Live on Vercel.
-        </p>
-        <div class="tags">
-          <span class="tag tag-cyan">JavaScript</span>
-          <span class="tag tag-cyan">Dev Tool</span>
-          <span class="tag tag-cyan">API</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://apitester-teal.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__link">
-            Live Demo <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-          <a href="https://github.com/anointedthedeveloper/apitester" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
-            GitHub <span class="material-symbols-outlined">open_in_new</span>
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /.projects-grid -->
-
-    <div style="text-align:center;margin-top:3rem;">
-      <a href="https://github.com/anointedthedeveloper?tab=repositories"
-         target="_blank" rel="noopener noreferrer" class="btn-outline">
-        <span class="material-symbols-outlined">code</span>
-        See all 128 repos on GitHub
-      </a>
     </div>
   </div>
 </section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="material-symbols-outlined">terminal</span>
-        Anointed Agunloye
-      </div>
-      <p class="footer__copy">© 2026 Anointed Agunloye. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://dev.to/anointedthedeveloper"      target="_blank" rel="noopener noreferrer">Dev.to</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year>2026</span> Anointed Agunloye</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>
+      <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
   </div>
 </footer>
+<script src="data.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
