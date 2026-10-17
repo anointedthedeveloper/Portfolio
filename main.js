@@ -136,8 +136,21 @@
   }
   var ghPromise = loadGitHub();
 
-  function setStat(name, text) {
-    $$('[data-stat="' + name + '"]').forEach(function (el) { el.textContent = text; el.classList.remove('is-loading'); });
+  function countUp(el, to) {
+    if (reducedMotion || !window.requestAnimationFrame) { el.textContent = nf.format(to); return; }
+    var t0 = null, dur = 900;
+    (function step(ts) {
+      t0 = t0 || ts;
+      var k = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = nf.format(Math.round(to * e));
+      if (k < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+  function setStat(name, value) {
+    $$('[data-stat="' + name + '"]').forEach(function (el) {
+      el.classList.remove('is-loading');
+      if (typeof value === 'number') countUp(el, value); else el.textContent = value;
+    });
   }
   function hideTile(name) {
     $$('[data-tile="' + name + '"]').forEach(function (el) { el.hidden = true; });
@@ -148,18 +161,18 @@
   ghPromise.then(function (res) {
     var d = res.data, note = $('[data-gh-note]');
     if (d) {
-      setStat('repos', nf.format(d.user.repos));
-      setStat('followers', nf.format(d.user.followers));
+      setStat('repos', d.user.repos);
+      setStat('followers', d.user.followers);
       var complete = d.repos.length >= d.user.repos;
       if (complete) {
         var stars = d.repos.reduce(function (n, r) { return n + (r.fork ? 0 : r.stars); }, 0);
-        setStat('stars', nf.format(stars));
+        setStat('stars', stars);
       } else { hideTile('stars'); }
       if (note) note.textContent = (res.state === 'stale'
         ? 'GitHub is rate-limiting requests right now; showing figures cached ' + ago(new Date(d.ts).toISOString()) + '.'
         : 'Live from the public GitHub API, cached up to 6 hours.') + ' Stars count original (non-fork) repositories.';
     } else {
-      setStat('repos', String(D.snapshot.public_repos));
+      setStat('repos', D.snapshot.public_repos);
       setStat('followers', D.snapshot.followers);
       hideTile('stars');
       if (note) note.textContent = 'Live GitHub data is unavailable, so these are figures from my profile on ' + D.snapshot.date + '.';
@@ -211,6 +224,7 @@
       '<div class="chips">' + p.stack.map(function (s) { return '<span class="chip">' + esc(s) + '</span>'; }).join('') + '</div>' +
       '<div class="pcard__foot"><div class="pcard__links">' +
       (repoUrl ? '<a class="pcard__link" href="' + repoUrl + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(p.name) + ' source code on GitHub">' + icon('github') + 'Source</a>' : '') +
+      (p.extra || []).map(function (x) { return '<a class="pcard__link" href="' + esc(x.url) + '" target="_blank" rel="noopener noreferrer">' + icon('up-right') + esc(x.label) + '</a>'; }).join('') +
       (p.live ? '<a class="pcard__link" href="' + esc(p.live) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(p.name) + ': ' + esc(p.liveLabel) + '">' + icon('up-right') + esc(p.liveLabel) + '</a>' : '') +
       '</div></div></div></article>';
   }
@@ -222,12 +236,19 @@
     });
   }
 
+  function readyImages(scope) {
+    $$('.pcard__media img', scope).forEach(function (img) {
+      var done = function () { img.classList.add('is-loaded'); img.parentNode.classList.add('is-ready'); };
+      if (img.complete && img.naturalWidth) done(); else { img.addEventListener('load', done); img.addEventListener('error', done); }
+    });
+  }
+
   var homeList = $('[data-projects="home"]');
   if (homeList) {
     homeList.innerHTML = D.projects.filter(function (p) { return p.home; }).map(function (p, i) {
       return cardHtml(p, i === 0).replace('<article class="pcard', '<article class="reveal pcard');
     }).join('');
-    observe(homeList);
+    readyImages(homeList); observe(homeList);
   }
 
   var clientList = $('[data-projects="client"]');
@@ -235,7 +256,7 @@
     clientList.innerHTML = D.projects.filter(function (p) { return p.cat === 'client'; }).map(function (p) {
       return cardHtml(p, false).replace('<article class="pcard', '<article class="reveal pcard');
     }).join('');
-    observe(clientList);
+    readyImages(clientList); observe(clientList);
   }
 
   var list = $('[data-projects="all"]');
@@ -270,6 +291,7 @@
         first = false;
         return html;
       }).join('');
+      readyImages(list);
       emptyEl.hidden = items.length > 0;
       countEl.textContent = items.length + (items.length === 1 ? ' project' : ' projects') + (state.cat !== 'all' || q ? ' match' + (items.length === 1 ? 'es' : '') : '');
     };
@@ -351,6 +373,49 @@
       status.textContent = 'Opening your email app… if nothing opens, write to ' + TO + ' directly.';
       window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
+  }
+
+  /* ---------- Motion details ---------- */
+  var bar = $('.progress');
+  if (bar) {
+    var tick = false;
+    var upd = function () {
+      var h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')'; tick = false;
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+    upd();
+  }
+
+  var loader = $('.loader');
+  if (loader) {
+    var t0 = performance.now();
+    var hide = function () {
+      var wait = Math.max(0, 1050 - (performance.now() - t0));
+      setTimeout(function () { loader.classList.add('is-done'); root.classList.remove('loading'); }, wait);
+    };
+    if (document.readyState === 'complete') hide(); else window.addEventListener('load', hide);
+    try { sessionStorage.setItem('seen', '1'); } catch (e) {}
+  }
+
+  var term = $('.term');
+  if (term && !reducedMotion) {
+    var lines = $$('.t-line', term), at = 350;
+    lines.forEach(function (l) {
+      l.style.setProperty('--d', at + 'ms');
+      var cmd = $('.t-cmd', l);
+      if (cmd) { var n = cmd.textContent.length; cmd.style.setProperty('--n', n); cmd.style.setProperty('--d', (at + 120) + 'ms'); cmd.style.setProperty('--t', (n * 38) + 'ms'); at += n * 38 + 260; }
+      else at += 110;
+    });
+    term.classList.add('term--live');
+  }
+
+  if (window.matchMedia && matchMedia('(hover: hover)').matches) {
+    document.addEventListener('pointermove', function (e) {
+      var c = e.target.closest && e.target.closest('.pcard'); if (!c) return;
+      var b = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - b.left) + 'px'); c.style.setProperty('--my', (e.clientY - b.top) + 'px');
+    }, { passive: true });
   }
 
   observe(document);

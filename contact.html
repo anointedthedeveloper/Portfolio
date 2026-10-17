@@ -31,11 +31,15 @@
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t); d.classList.add('js');
+      var seen = false; try { seen = !!sessionStorage.getItem('seen'); } catch (e) {}
+      if (!seen && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('loading');
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="loader" aria-hidden="true"><div class="loader__box"><div class="loader__mark">AA</div><div class="loader__bar"><i></i></div><div class="loader__cmd">$ npm run portfolio</div></div></div>
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
@@ -66,14 +70,15 @@
     <div>
       <h2 class="display h-md">Direct channels</h2>
       <div class="channels" style="margin-top:1.25rem">
-        <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-mail"/></svg><div><small>Email</small><a href="mailto:contact@anobyte.online">contact@anobyte.online</a></div></div>
-        <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-phone"/></svg><div><small>Phone / WhatsApp</small><a href="tel:+2348101209470">+234 810 120 9470</a><br><a href="tel:+2349016471351">+234 901 647 1351</a></div></div>
+        <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-mail"/></svg><div><small>Email</small><a href="mailto:anointedthedeveloper@gmail.com">anointedthedeveloper@gmail.com</a></div></div>
+        <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-phone"/></svg><div><small>Phone</small><a href="tel:+2348101209470">+234 810 120 9470</a></div></div>
+        <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg><div><small>Résumé</small><a href="assets/Anointed-Agunloye-Resume.pdf" download>Anointed-Agunloye-Resume.pdf</a></div></div>
         <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg><div><small>GitHub</small><a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer">github.com/anointedthedeveloper</a></div></div>
         <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-pen"/></svg><div><small>Dev.to</small><a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">dev.to/anointedthedeveloper</a></div></div>
         <div class="channel"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg><div><small>Company</small><a href="https://anobyte.online" target="_blank" rel="noopener noreferrer">anobyte.online</a></div></div>
       </div>
     </div>
-    <form class="form" id="contact-form" data-to="contact@anobyte.online" novalidate aria-labelledby="form-title">
+    <form class="form" id="contact-form" data-to="anointedthedeveloper@gmail.com" novalidate aria-labelledby="form-title">
       <h2 class="display h-md" id="form-title">Send a message</h2>
       <div class="form__row">
         <div class="field"><label for="name">Name</label><input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="err-name"><p class="err" id="err-name" role="alert"></p></div>

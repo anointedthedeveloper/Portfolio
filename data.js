@@ -31,7 +31,7 @@ window.PORTFOLIO = {
       home: true, spot: true, image: 'reporoom',
       alt: 'RepoRoom landing page with a developer console panel showing commands and an active thread',
       summary: 'Team chat built for developers: real-time messaging, groups with admin roles, file and voice attachments, and WebRTC audio and video calls with screen sharing.',
-      why: 'Postgres row-level security on all five tables, Supabase Realtime for messages and call signalling, and an installable PWA with push notifications.',
+      why: 'Versioned Postgres migrations with row-level security (including a SECURITY DEFINER fix for recursive policies), Supabase Realtime for messages and signalling, and a link-preview edge function with private-network blocking and 24-hour caching.',
       stack: ['React 18', 'TypeScript', 'Vite', 'Supabase', 'WebRTC', 'Tailwind'],
       live: 'https://www.reporoom.site', liveLabel: 'Live site'
     },
@@ -85,7 +85,8 @@ window.PORTFOLIO = {
         ['g', '✓ auth context · protected routes'] ] },
       summary: 'Command-line tool that bootstraps a React app with Vite, Tailwind, React Router 6, an auth context, Axios interceptors and error boundaries.',
       why: 'Flags cover template, package manager, git init and install, so a new project is ready in one command.',
-      stack: ['Node.js', 'React', 'Vite', 'Tailwind']
+      stack: ['Node.js', 'React', 'Vite', 'Tailwind'],
+      extra: [{ label: 'npm package', url: 'https://www.npmjs.com/package/create-nexus-react-app' }]
     },
     {
       id: 'bloomcart', repo: 'BloomCart-Flower-Shop', name: 'BloomCart', cat: 'web', kind: 'E-commerce',
@@ -165,12 +166,12 @@ window.PORTFOLIO = {
         ['p', 'PHIS-Transcript-Portal'],
         ['d', '// live'],
         ['g', 'peterharvardschools.cloud'] ] },
-      summary: 'Website and supporting software for Peter Harvard International Schools, including a transcript portal.',
-      stack: ['JavaScript', 'Web platform'],
+      summary: 'The school’s public website plus a student, parent and staff portal covering admissions, news and events, a student management system and internal tools. Sole engineer for the whole estate.',
+      stack: ['JavaScript', 'Web platform', 'Portals'],
       live: 'https://peterharvardschools.cloud', liveLabel: 'Visit site'
     },
     {
-      id: 'etak', repo: null, name: 'Etak Travels & Tours', cat: 'client', kind: 'Client work',
+      id: 'etak', repo: null, name: 'Etak Travels & Tours', cat: 'client', kind: 'Client · Production',
       image: 'etak-travels',
       alt: 'Etak Travels and Tours home page with a flight search panel over an Abuja skyline',
       summary: 'Website for an Abuja travel management company: flights, hotels, tour packages and visa assistance, with a booking-style search panel that routes enquiries to the team.',
@@ -178,7 +179,7 @@ window.PORTFOLIO = {
       live: 'https://etaktravels.com', liveLabel: 'Visit site'
     },
     {
-      id: 'aremu', repo: null, name: 'Aremu Tech Eazy Solutions', cat: 'client', kind: 'Client work',
+      id: 'aremu', repo: null, name: 'Aremu Tech Eazy Solutions', cat: 'client', kind: 'Client · Production',
       art: { label: 'from live site', lines: [
         ['d', '// ICT services · Abuja'],
         ['p', 'CBT centre setup'],
@@ -191,13 +192,24 @@ window.PORTFOLIO = {
       live: 'https://aremutecheazysolutions.com', liveLabel: 'Visit site'
     },
     {
-      id: 'rmc', repo: 'Real-Moving-Canada', name: 'Real Moving Canada', cat: 'client', kind: 'Client work',
+      id: 'rmc', repo: 'Real-Moving-Canada', name: 'Real Moving Canada', cat: 'client', kind: 'Client · Production',
       image: 'real-moving-canada',
       alt: 'Real Moving Canada home page with a moving truck and a Get a Free Quote button',
-      summary: 'Website for a Saskatoon moving company: a five-step quote flow, contact and review forms, per-page SEO, and a customer-portal front end backed by an Express and MongoDB API.',
-      why: 'Source is a fork of goodnessemmanuel1/Real-Moving-Canada, built in collaboration.',
-      stack: ['React 19', 'Vite', 'React Router', 'Express', 'MongoDB'],
-      live: 'https://real-moving-canada.vercel.app', liveLabel: 'Live site'
+      summary: 'Platform for a Saskatoon moving company: a five-step quote flow and an authenticated customer portal for moves, quotes, bookings, payments, documents and messages.',
+      why: 'Express REST API of 25 endpoints over 11 Mongoose models with Zod validation, JWT sessions in httpOnly cookies, rate limiting and CSRF checks, covered by Supertest integration tests. Public source is a fork of goodnessemmanuel1/Real-Moving-Canada.',
+      stack: ['React 19', 'Node.js', 'Express 5', 'MongoDB Atlas', 'Vercel'],
+      live: 'https://realmovingcanada.ca', liveLabel: 'Live site'
+    },
+    {
+      id: 'protech', repo: null, name: 'Protech Corporate Solutions', cat: 'client', kind: 'Client · Production',
+      art: { label: 'private codebase', lines: [
+        ['d', '// loan management platform'],
+        ['p', 'role     ', 'creator & sole developer'],
+        ['p', 'status   ', 'in production'],
+        ['p', 'scope    ', 'lending operations'],
+        ['d', '// source is private'] ] },
+      summary: 'Loan management software the company uses to run its lending operations, designed, built and maintained as sole developer.',
+      stack: ['Full stack', 'Business systems']
     },
     {
       id: 'campuscoin', repo: 'CampusCoin-FD', name: 'Campus Coin', cat: 'client', kind: 'Collaboration',

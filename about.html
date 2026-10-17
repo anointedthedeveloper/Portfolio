@@ -31,11 +31,15 @@
       try { t = localStorage.getItem('theme'); } catch (e) {}
       if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t); d.classList.add('js');
+      var seen = false; try { seen = !!sessionStorage.getItem('seen'); } catch (e) {}
+      if (!seen && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('loading');
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="loader" aria-hidden="true"><div class="loader__box"><div class="loader__mark">AA</div><div class="loader__bar"><i></i></div><div class="loader__cmd">$ npm run portfolio</div></div></div>
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
@@ -59,6 +63,7 @@
     <p class="eyebrow">About</p>
     <h1 class="display h-xl">Software, end to end</h1>
     <p class="lead">I have been writing software since 2019 and now lead full stack and software engineering at Anobyte Technologies.</p>
+    <p style="margin-top:1.5rem"><a class="btn btn--primary" href="assets/Anointed-Agunloye-Resume.pdf" download><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg> Download résumé (PDF)</a></p>
   </div>
 </section>
 <section class="section">
@@ -77,9 +82,9 @@
       <section aria-labelledby="story">
         <h2 class="display h-md" id="story">Background</h2>
         <div class="prose">
-          <p>I am a full stack developer and software engineer from Nigeria. I started programming in 2019, teaching myself computer science fundamentals before building for clients and publishing my work on GitHub.</p>
-          <p>Day to day that means React and TypeScript interfaces, Node.js and Python services, and the databases behind them, plus the occasional desktop app in C# or Android app in Kotlin. I am most interested in real-time systems, access control done properly at the database, and tools that remove repetitive work.</p>
-          <p>Alongside Anobyte Technologies, I build and maintain software for Peter Harvard International Schools. I also publish on <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>.</p>
+          <p>I am a full stack developer and software engineer based in Abuja, Nigeria. I started programming in 2019, teaching myself computer science fundamentals before building for clients and publishing my work on GitHub. Since then I have built and run production software for schools, lenders, service businesses and product teams in Nigeria and Canada.</p>
+          <p>Day to day that means React and TypeScript interfaces, Node.js and Express services, MongoDB and PostgreSQL behind them, authentication and security, plus the occasional desktop app in C# or Android app in Kotlin. I am most interested in real-time systems, access control done properly at the database, and tools that remove repetitive work.</p>
+          <p>I lead engineering at Anobyte Technologies and am the sole engineer behind Peter Harvard International Schools’ platforms. I also publish on <a href="https://dev.to/anointedthedeveloper" target="_blank" rel="noopener noreferrer">Dev.to</a>.</p>
         </div>
       </section>
       <section aria-labelledby="how">
@@ -99,17 +104,17 @@
   <div>
     <p class="tl__kind">Employment</p>
     <h3 class="tl__role">Lead Full Stack &amp; Software Engineer</h3>
-    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a></p>
-    <ul><li>Lead full stack and software engineering across web applications, APIs and internal tools at an engineering company focused on digital solutions.</li><li>Public work from this period: <a class="link" href="projects.html#fullstack">RepoRoom</a> (real-time chat with WebRTC calls), CodeSync (CRDT collaborative editor), github-orbit (scheduled automation) and WebLab IDE.</li></ul><div class="chips"><span class=chip>React</span><span class=chip>TypeScript</span><span class=chip>Node.js</span><span class=chip>Supabase</span><span class=chip>PostgreSQL</span><span class=chip>WebSockets</span></div>
+    <p class="tl__org"><a class="link" href="https://anobyte.online" target="_blank" rel="noopener noreferrer">Anobyte Technologies</a> · Remote</p>
+    <ul><li>Lead engineering for a software studio delivering web platforms, REST APIs and desktop software for clients in Nigeria and Canada.</li><li>Delivered <a class="link" href="projects.html#client">Real Moving Canada, Etak Travels &amp; Tours and Aremu Tech Eazy Solutions</a> to production.</li><li>Built StockWise, a C#/.NET inventory system with SQLite storage, low-stock alerts, sales tracking, reporting and a packaged installer.</li><li>Author of <a class="link" href="https://www.npmjs.com/package/create-nexus-react-app" target="_blank" rel="noopener noreferrer">create-nexus-react-app</a>, a published npm CLI that scaffolds React + TypeScript projects with routing, protected routes and an auth-ready API layer.</li></ul><div class="chips"><span class=chip>React</span><span class=chip>Node.js</span><span class=chip>Express</span><span class=chip>MongoDB</span><span class=chip>C# / .NET</span><span class=chip>npm</span></div>
   </div>
 </li>
           <li class="tl reveal">
-  <p class="tl__date">Ongoing</p>
+  <p class="tl__date">2025 — Present</p>
   <div>
-    <p class="tl__kind">Client engagement</p>
+    <p class="tl__kind">Employment</p>
     <h3 class="tl__role">Lead Software Engineer</h3>
-    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a></p>
-    <ul><li>Builds and maintains the school’s website and related systems, including a transcript portal (public repositories: Peter-Harvard-International-Schools, PHIS-Transcript-Portal).</li></ul><div class="chips"><span class=chip>JavaScript</span><span class=chip>Web platform</span></div>
+    <p class="tl__org"><a class="link" href="https://peterharvardschools.cloud" target="_blank" rel="noopener noreferrer">Peter Harvard International Schools</a> · Abuja, Nigeria</p>
+    <ul><li>Own the school’s entire software estate as sole engineer: architecture, development, hosting, security and day-to-day maintenance.</li><li>Built and run the public website and the student, parent and staff portal, covering admissions, news, events and school information.</li><li>Built the student management system, admissions workflow and internal tools that staff use to run school operations.</li></ul><div class="chips"><span class=chip>JavaScript</span><span class=chip>Web platform</span><span class=chip>Portals</span></div>
   </div>
 </li>
           <li class="tl reveal">
@@ -117,8 +122,8 @@
   <div>
     <p class="tl__kind">Independent</p>
     <h3 class="tl__role">Full Stack Developer</h3>
-    <p class="tl__org">Freelance and open source</p>
-    <ul><li>Web platforms, REST APIs, desktop software and developer tools, including the BloomCart storefront, the StockWise inventory app and the Browser-Based Exam system.</li><li>Websites and apps for organisations including Etak Travels &amp; Tours, Aremu Tech Eazy Solutions, Real Moving Canada and Campus Coin (see <a class="link" href="projects.html#client">Projects</a>).</li><li>Maintains a large body of public repositories, including Python API services and developer tooling.</li></ul><div class="chips"><span class=chip>Python</span><span class=chip>C# / .NET</span><span class=chip>Express</span><span class=chip>Docker</span></div>
+    <p class="tl__org">Freelance · Remote</p>
+    <ul><li>Built web applications, REST APIs and internal tools for clients with React, Node.js and Express, handling delivery end to end from requirements to deployment.</li><li>Created and maintain the loan management software Protech Corporate Solutions uses to run its lending operations, as sole developer.</li></ul><div class="chips"><span class=chip>React</span><span class=chip>Node.js</span><span class=chip>Express</span></div>
   </div>
 </li>
           <li class="tl reveal">
@@ -132,10 +137,19 @@
 </li>
         </ol>
       </section>
+      <section aria-labelledby="edu">
+        <h2 class="display h-md" id="edu">Education</h2>
+        <ul class="edu">
+          <li><b>Advanced Diploma in Software Engineering (ADSE)</b><span>Aptech Computer Education</span></li>
+          <li><b>Web Development Course</b><span>Early Code</span></li>
+          <li><b>Graphic Design</b><span>Blessed Child Computer Schools</span></li>
+          <li><b>Secondary School Certificate</b><span>Completed</span></li>
+        </ul>
+      </section>
       <section aria-labelledby="skills-t">
         <h2 class="display h-md" id="skills-t">Technical expertise</h2>
-        <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Component-driven, responsive interfaces, including real-time and installable (PWA) apps.</p><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Monaco Editor</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>APIs, real-time servers, authentication and background jobs.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">WebSockets</span><span class="chip">Socket.io</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Relational and document stores, with access rules enforced at the database.</p><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Row-level security</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Yjs (CRDT)</span></div></div><div class="skill reveal"><h3>Tooling, infrastructure &amp; automation</h3><p>The pipeline around the code: deploys, schedulers and developer tooling.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Docker</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">Cron jobs</span><span class="chip">CLI tools (npm / npx)</span></div></div></div>
-<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET 8 (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
+        <div class="skills"><div class="skill reveal"><h3>Frontend engineering</h3><p>Accessible, responsive interfaces, including installable PWAs.</p><div class="chips"><span class="chip">React.js</span><span class="chip">JavaScript (ES6+)</span><span class="chip">TypeScript</span><span class="chip">React Router</span><span class="chip">Context API</span><span class="chip">TanStack Query</span><span class="chip">React Hook Form</span><span class="chip">Tailwind CSS</span><span class="chip">Vite</span></div></div><div class="skill reveal"><h3>Backend engineering</h3><p>REST APIs, authentication and security, and real-time servers.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">RESTful API design</span><span class="chip">JWT &amp; cookie sessions</span><span class="chip">bcrypt</span><span class="chip">Zod validation</span><span class="chip">Rate limiting</span><span class="chip">CORS / CSRF</span><span class="chip">WebSockets</span><span class="chip">Socket.IO</span><span class="chip">WebRTC</span></div></div><div class="skill reveal"><h3>Databases &amp; data</h3><p>Schema design and access rules enforced where the data lives.</p><div class="chips"><span class="chip">MongoDB (Mongoose, Atlas)</span><span class="chip">PostgreSQL</span><span class="chip">Migrations</span><span class="chip">Row-level security</span><span class="chip">Supabase</span><span class="chip">Supabase Realtime</span><span class="chip">SQLite</span></div></div><div class="skill reveal"><h3>Tooling, delivery &amp; automation</h3><p>Testing, deployment and the tooling around the code.</p><div class="chips"><span class="chip">Git &amp; GitHub API</span><span class="chip">Supertest</span><span class="chip">Vitest</span><span class="chip">React Testing Library</span><span class="chip">ESLint</span><span class="chip">Vercel</span><span class="chip">Render</span><span class="chip">npm publishing</span><span class="chip">Resend (email)</span><span class="chip">Cron jobs</span></div></div></div>
+<p class="muted reveal" style="margin-top:1rem;font-size:.9rem">Also: C# / .NET (StockWise desktop app) and Kotlin (DocVerse Android app).</p>
       </section>
     </div>
   </div>
@@ -149,6 +163,7 @@
       </div>
       <div class="cta__actions">
         <a class="btn btn--primary" href="contact.html">Get in touch <svg class="icon icon-arrow" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-arrow"/></svg></a>
+        <a class="btn" href="assets/Anointed-Agunloye-Resume.pdf" download><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg> Résumé</a>
         <a class="btn" href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg> GitHub</a>
       </div>
     </div>
